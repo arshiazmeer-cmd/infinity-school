@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Download } from "lucide-react";
 import logoImg from "@/assets/logo.png";
+import logo2Img from "@/assets/logo2.png";
 
 export function Footer() {
   return (
@@ -10,7 +11,8 @@ export function Footer() {
         {/* Brand Column */}
         <div className="space-y-6">
           <Link href="/" className="flex items-center gap-3">
-            <img src={logoImg} alt="Infinity Public School" className="h-16 w-auto object-contain" />
+            <img src={logoImg} alt="IPS Shield Logo" className="h-16 w-auto object-contain" />
+            <img src={logo2Img} alt="Infinity Public School" className="h-12 w-auto object-contain brightness-0 invert" />
           </Link>
           <p className="text-gray-300 text-sm leading-relaxed">
             A premier integrated school combining academic excellence with IIT-JEE and NEET preparation under one roof in Kursi, Barabanki.
@@ -22,7 +24,7 @@ export function Footer() {
             <a href="https://www.instagram.com/infinity.kursi/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E1306C] transition-colors" aria-label="Instagram">
               <Instagram size={18} />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#FF0000] transition-colors" aria-label="YouTube">
+            <a href="https://www.youtube.com/@InfinityKursi" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#FF0000] transition-colors" aria-label="YouTube">
               <Youtube size={18} />
             </a>
           </div>

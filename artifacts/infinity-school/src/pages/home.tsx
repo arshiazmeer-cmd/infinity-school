@@ -12,10 +12,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import heroBg from "@/assets/hero.png";
-import faculty1 from "@/assets/faculty-1.png";
-import faculty2 from "@/assets/faculty-2.png";
-import faculty3 from "@/assets/faculty-3.png";
-import faculty4 from "@/assets/faculty-4.png";
 import facility1 from "@/assets/facility-1.png";
 import facility2 from "@/assets/facility-2.png";
 import facility3 from "@/assets/facility-3.png";
@@ -303,14 +299,14 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors flex flex-col"
               >
                 <span className={`inline-block py-1 px-3 rounded-full ${course.accent} text-white text-xs font-bold mb-4`}>
                   {course.level}
                 </span>
                 <h4 className="text-2xl font-bold mb-3">{course.name}</h4>
-                <p className="text-primary-foreground/70 mb-8 leading-relaxed">{course.highlight}</p>
-                <Link href="/admission">
+                <p className="text-primary-foreground/70 mb-8 leading-relaxed flex-grow">{course.highlight}</p>
+                <Link href="/admission" className="mt-auto">
                   <Button className="w-full bg-white text-primary hover:bg-gray-100 group">
                     Enquire Now <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -412,22 +408,21 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
             {[
-              { img: faculty1, name: "Dr. Rajesh Kumar", desc: "IIT Delhi • 12 Yrs Exp", sub: "Physics Expert" },
-              { img: faculty2, name: "Dr. Priya Sharma", desc: "AIIMS • 8 Yrs Exp", sub: "Biology Head" },
-              { img: faculty3, name: "Amit Singh", desc: "NIT Allahabad • 10 Yrs Exp", sub: "Mathematics" },
-              { img: faculty4, name: "Neha Gupta", desc: "Delhi Univ • 7 Yrs Exp", sub: "Chemistry" },
+              { name: "Ms. Afshan Parveen", role: "Teacher" },
+              { name: "Ms. Nishi Parveen", role: "Teacher" },
+              { name: "Mrs. Anamika", role: "Teacher" },
+              { name: "Ms. Baby Sana", role: "Teacher" },
+              { name: "Ms. Arshiya Kamil", role: "Teacher" },
+              { name: "Ms. Hira", role: "Teacher" },
             ].map((fac, i) => (
-              <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
-                <div className="aspect-[3/4] overflow-hidden">
-                  <img src={fac.img} alt={fac.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div key={i} className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow group text-center border border-border hover:border-primary/20">
+                <div className="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Users size={28} className="text-primary/50" />
                 </div>
-                <div className="p-6 text-center">
-                  <h4 className="font-bold text-lg text-primary mb-1">{fac.name}</h4>
-                  <p className="text-secondary font-semibold text-sm mb-2">{fac.sub}</p>
-                  <p className="text-muted-foreground text-xs">{fac.desc}</p>
-                </div>
+                <h4 className="font-bold text-sm text-primary mb-1 leading-tight">{fac.name}</h4>
+                <span className="text-xs font-semibold bg-secondary/10 text-secondary px-2 py-0.5 rounded-full">{fac.role}</span>
               </div>
             ))}
           </div>

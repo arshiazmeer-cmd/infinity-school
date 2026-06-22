@@ -112,27 +112,6 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
 
-      {/* Admission Open Banner */}
-      <div className="bg-primary text-secondary overflow-hidden py-2.5 whitespace-nowrap border-b-2 border-secondary/30">
-        <div className="inline-flex animate-[marquee_25s_linear_infinite]">
-          <span className="text-sm font-bold tracking-wider uppercase flex items-center gap-6 pr-8">
-            <span>Admissions Open 2026–27</span>
-            <span className="text-white/50">|</span>
-            <span className="text-white font-medium">Limited Seats Available from Nursery to Class 12th</span>
-            <span className="text-white/50">|</span>
-            <Link href="/admission" className="underline hover:text-white transition-colors">Apply Now</Link>
-            <span className="text-white/50">|</span>
-            <a href="/brochure.pdf" download className="underline hover:text-white transition-colors">Download Brochure</a>
-            <span className="text-white/50 ml-8">|</span>
-            <span>Admissions Open 2026–27</span>
-            <span className="text-white/50">|</span>
-            <span className="text-white font-medium">Limited Seats Available from Nursery to Class 12th</span>
-            <span className="text-white/50">|</span>
-            <Link href="/admission" className="underline hover:text-white transition-colors">Apply Now</Link>
-          </span>
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

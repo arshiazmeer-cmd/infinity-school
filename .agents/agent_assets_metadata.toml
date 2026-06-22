@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "SCy9BlM-eRZcqewzZmTLS"
+uri = "file://artifacts/infinity-school/src/assets/hero.png"
+type = "image"
+title = "Hero classroom background"
+
+[[generated]]
+id = "NWR7nOn8peLwcMeV-nDYZ"
+uri = "file://artifacts/infinity-school/src/assets/faculty-1.png"
+type = "image"
+title = "Faculty portrait male 1"
+
+[[generated]]
+id = "WdM1DflGRXkrhUvnbK_nI"
+uri = "file://artifacts/infinity-school/src/assets/faculty-2.png"
+type = "image"
+title = "Faculty portrait female 1"
+
+[[generated]]
+id = "f3dQRKDhuevekcvOKKPMt"
+uri = "file://artifacts/infinity-school/src/assets/faculty-3.png"
+type = "image"
+title = "Faculty portrait male 2"
+
+[[generated]]
+id = "p6tOnA6e0ynFCxxJWOFo-"
+uri = "file://artifacts/infinity-school/src/assets/faculty-4.png"
+type = "image"
+title = "Faculty portrait female 2"
+
+[[generated]]
+id = "BatPtFTquKEV6R8ZFtum6"
+uri = "file://artifacts/infinity-school/src/assets/facility-1.png"
+type = "image"
+title = "Smart classroom facility"
+
+[[generated]]
+id = "R4i0GnLmmmLa0dT8vs388"
+uri = "file://artifacts/infinity-school/src/assets/facility-2.png"
+type = "image"
+title = "Science laboratory facility"
+
+[[generated]]
+id = "T8Us4m9BVsvgW6MVNw7QI"
+uri = "file://artifacts/infinity-school/src/assets/facility-3.png"
+type = "image"
+title = "Hostel room facility"
+
+[[generated]]
+id = "FQlGgmVzuYa4WbqnfBJso"
+uri = "file://artifacts/infinity-school/src/assets/topper-1.png"
+type = "image"
+title = "Topper student 1"
+
+[[generated]]
+id = "TcWcsY6Gx72gKDfTXwLa-"
+uri = "file://artifacts/infinity-school/src/assets/topper-2.png"
+type = "image"
+title = "Topper student 2"

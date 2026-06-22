@@ -1,0 +1,163 @@
+Build a modern, premium, responsive educational website for Infinity Public School (Integrated Schooling + IIT-JEE + NEET Preparation).
+
+Brand Details:
+Brand Name: Infinity Public School
+Tagline: Building Future Doctors & Engineers
+Location: Kursi, Barabanki, Uttar Pradesh, India
+Contact Number: 9118502112
+Email: ipskursi@gmail.com
+WhatsApp Integration Required
+Website Objective:
+
+Generate admissions for students for integrated schooling with IIT-JEE and NEET coaching.
+
+Theme Colors:
+Primary Color: #063d65 (Deep Blue for trust, authority, professionalism)
+Secondary Color: #fe8400 (Orange for energy, action, admissions)
+Background: White + light gray
+Text: Dark gray and navy blue
+Design Requirements:
+Premium, clean, modern and professional UI
+Use the exact brand color palette consistently
+Blue for trust-focused sections
+Orange for CTA buttons, highlights, badges, and important notices
+Professional fonts: Poppins, Inter, Montserrat
+Smooth animations using Framer Motion
+Hover effects on cards/buttons
+Sticky navbar
+Sticky WhatsApp button
+Sticky Call button
+Mobile-first responsive design
+Fast loading speed
+SEO optimized structure
+Glassmorphism cards
+Premium gradients using blue and orange
+Modern educational illustrations
+Attractive iconography
+Homepage Structure:
+1. Hero Section
+Full-width premium hero banner with students studying
+Overlay with gradient using #063d65 and #fe8400
+Heading:
+“Barabanki’s Premier Integrated School for IIT-JEE & NEET”
+Subheading:
+“Academic Excellence + Competitive Preparation Under One Roof”
+CTA Buttons:
+Apply Now
+Book Free Counseling
+Download Brochure
+2. Why Choose Infinity Public School
+
+Create animated cards for:
+
+Integrated Schooling
+Expert Faculty
+Hostel Facility
+Regular Test Series
+Personalized Mentorship
+Competitive Environment
+3. Courses Offered
+
+Modern course cards for:
+
+Early Foundation (Class Nursery-5)
+Foundation (Class 6–8)
+Pre-Foundation (Class 9–10)
+IIT-JEE Program (11–12)
+NEET Program (11–12)
+School + Coaching Integrated Program
+4. Faculty Section
+
+Faculty cards with:
+
+Photo
+Qualification
+Experience
+Subject expertise
+6. Campus Facilities
+
+Interactive gallery for:
+
+Smart Classrooms
+Science Labs
+Library
+Hostel
+Sports Ground
+Computer Lab
+7. Testimonials
+
+Auto-slider for:
+
+Parents feedback
+Student reviews
+8. Admission Process
+
+Visual process flow:
+Inquiry → Counseling → Entrance Test → Admission
+
+9. FAQ Section
+
+Accordion style FAQs.
+
+10. Contact Section
+
+Include:
+
+Working inquiry form
+Google Maps
+Phone
+Email
+Address
+WhatsApp CTA
+Additional Pages:
+About Us
+Our Faculty
+Results
+Gallery
+Hostel Facilities
+Admission Process
+FAQs
+Contact Us
+Blog Section
+Special Features:
+Admission Open banner
+Latest Notice Board
+Scholarship Announcement section
+Download Prospectus
+Event Gallery
+Toppers Wall
+News & Updates
+Functional Requirements:
+Fully working inquiry form
+WhatsApp integration
+Download brochure button
+Admin panel for updating results/gallery/testimonials
+SEO-friendly URLs
+Schema markup for school
+Google Analytics integration
+Performance optimized
+Lazy loading images
+Content Style:
+Professional
+Parent trust-building
+Admission-focused
+Student motivating
+Results-oriented
+SEO Keywords:
+Best School in Barabanki
+Best NEET Coaching in Barabanki
+Best IIT JEE Coaching in Barabanki
+Integrated School for NEET/JEE in Uttar Pradesh
+Residential School in Barabanki
+Technical Stack:
+
+Use:
+
+React.js
+Tailwind CSS
+Framer Motion
+ShadCN UI components
+Responsive modern design
+Production-ready code
+
+Make the design look premium like top institutes such as Allen, Aakash, and Resonance, but maintain a school-focused identity with trust, discipline, and academic excellence.

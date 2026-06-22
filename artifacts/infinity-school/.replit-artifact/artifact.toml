@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Infinity Public School"
+version = "1.0.0"
+id = "artifacts/infinity-school"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23333
+
+[services.development]
+run = "pnpm --filter @workspace/infinity-school run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/infinity-school", "run", "build" ]
+publicDir = "artifacts/infinity-school/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23333"
+BASE_PATH = "/"

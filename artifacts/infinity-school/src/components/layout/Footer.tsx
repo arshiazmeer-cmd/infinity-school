@@ -10,20 +10,16 @@ export function Footer() {
         {/* Brand Column */}
         <div className="space-y-6">
           <Link href="/" className="flex items-center gap-3">
-            <img src={logoImg} alt="Infinity Public School" className="h-14 w-14 object-contain" />
-            <div>
-              <div className="text-lg font-heading font-bold text-white leading-tight">Infinity Public School</div>
-              <div className="text-xs text-gray-300 font-inter tracking-wide">Building Future Doctors & Engineers</div>
-            </div>
+            <img src={logoImg} alt="Infinity Public School" className="h-16 w-auto object-contain" />
           </Link>
           <p className="text-gray-300 text-sm leading-relaxed">
             A premier integrated school combining academic excellence with IIT-JEE and NEET preparation under one roof in Kursi, Barabanki.
           </p>
           <div className="flex gap-3">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#1877F2] transition-colors" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=100095246302881" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#1877F2] transition-colors" aria-label="Facebook">
               <Facebook size={18} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E1306C] transition-colors" aria-label="Instagram">
+            <a href="https://www.instagram.com/infinity.kursi/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E1306C] transition-colors" aria-label="Instagram">
               <Instagram size={18} />
             </a>
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#FF0000] transition-colors" aria-label="YouTube">
@@ -41,7 +37,7 @@ export function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-heading font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-1">Quick Links</h3>
+          <h3 className="text-lg font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-1">Quick Links</h3>
           <ul className="space-y-3">
             {[
               { label: 'About Us', path: '/about' },
@@ -62,7 +58,7 @@ export function Footer() {
 
         {/* Courses */}
         <div>
-          <h3 className="text-lg font-heading font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-1">Programs</h3>
+          <h3 className="text-lg font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-1">Programs</h3>
           <ul className="space-y-3">
             {['Early Foundation (Nur–5)', 'Foundation (6–8)', 'Pre-Foundation (9–10)', 'IIT-JEE Program', 'NEET Program', 'Integrated Schooling'].map((item) => (
               <li key={item}>
@@ -76,7 +72,7 @@ export function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-heading font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-1">Contact Us</h3>
+          <h3 className="text-lg font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-1">Contact Us</h3>
           <ul className="space-y-4">
             <li className="flex gap-3 text-sm text-gray-300 items-start">
               <MapPin size={18} className="text-secondary shrink-0 mt-1" />
@@ -91,11 +87,13 @@ export function Footer() {
               <a href="mailto:ipskursi@gmail.com" className="hover:text-secondary transition-colors">ipskursi@gmail.com</a>
             </li>
           </ul>
-          <div className="mt-6 flex flex-col gap-2">
-            <span className="inline-block bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider w-fit">
-              Admissions Open 2026–27
-            </span>
-            <span className="text-xs text-gray-400">Limited Seats Available</span>
+          <div className="mt-6 flex gap-3">
+            <a href="https://www.facebook.com/profile.php?id=100095246302881" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-400 hover:text-secondary transition-colors flex items-center gap-1">
+              <Facebook size={14} /> Facebook
+            </a>
+            <a href="https://www.instagram.com/infinity.kursi/" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-400 hover:text-secondary transition-colors flex items-center gap-1">
+              <Instagram size={14} /> Instagram
+            </a>
           </div>
         </div>
       </div>

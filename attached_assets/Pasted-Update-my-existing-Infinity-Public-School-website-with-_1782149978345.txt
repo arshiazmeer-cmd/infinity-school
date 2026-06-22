@@ -1,0 +1,189 @@
+Update my existing **Infinity Public School** website with the following changes while keeping the same premium design, responsiveness, theme colors (#063d65 and #fe8400), animations, and structure intact.
+
+## Latest Changes:
+
+### 1. Update Leadership Names
+
+Replace the leadership names with:
+
+* **Director:** Dr. Nisar Ahmad Nadvi
+* **Managing Director:** Dr. Arshi Ahmad
+* **Principal:** Mrs. Pooja Rani
+
+Update these names in:
+
+* Leadership section
+* About page
+* Any popups/cards
+* Metadata if used
+
+---
+
+### 2. Replace Complete Staff Section
+
+Update the faculty/staff section with the following team:
+
+#### Administration
+
+* Mr. M.M. Zafar — Admin
+* Mr. Mohd Tayyab — Coordinator
+* Mr. Mohd. Danish Khan — Urdu Department Incharge
+* Ms. Shabeena Mirza — Academic Incharge (Juniors)
+* Mrs. Taniya Siraj — CCA Incharge
+* Mr. Almeen Siddiqui — Sports Incharge
+
+#### Teachers
+
+* Ms. Afshan Parveen — Teacher
+* Ms. Nishi Parveen — Teacher
+* Mrs. Anamika — Teacher
+* Ms. Baby Sana — Teacher
+* Ms. Arshiya Kamil — Teacher
+* Ms. Hira — Teacher
+
+#### Assistant Teachers
+
+* Mrs. Rubi Zafar — Assistant Teacher
+* Ms. Aisha Khatoon — Assistant Teacher
+* Ms. Vandana — Assistant Teacher
+* Ms. Hasan Zehra — Assistant Teacher
+
+Display them in proper categorized cards/grid layout.
+
+---
+
+### 3. Add Instagram Link
+
+Connect Instagram icon/link to:
+
+https://www.instagram.com/infinity.kursi/
+
+Add in:
+
+* Footer
+* Contact section
+* Floating social section (if available)
+
+---
+
+### 4. Add Facebook Link
+
+Connect Facebook icon/link to:
+
+https://www.facebook.com/profile.php?id=100095246302881
+
+Add in:
+
+* Footer
+* Contact section
+* Floating social section (if available)
+
+---
+
+### 5. Add Google Map in Contact Section
+
+Embed this map:
+
+https://maps.app.goo.gl/Yij45NgM657ubUxJA
+
+Make it fully responsive.
+
+---
+
+### 6. Update Homepage Button Colors
+
+Make all 3 homepage CTA buttons have the exact same styling/color as the current **Apply Now** button.
+
+Buttons:
+
+* Apply Now
+* Book Free Counseling
+* Download Brochure
+
+Use:
+
+* Background: #fe8400
+* Same hover effect
+* Same size
+* Same typography
+
+---
+
+### 7. Replace Text Logo with Actual Logo
+
+Remove the text-based logo “Infinity Public School”.
+
+Use only the uploaded logo image in:
+
+* Navbar
+* Footer
+* Mobile menu
+* Favicon
+
+Also remove the tagline:
+“Building Future Doctors & Engineers”
+
+---
+
+### 8. Change Entire Website Font
+
+Replace all current fonts with:
+
+**Verdana**
+
+Apply to:
+
+* Navbar
+* Headings
+* Paragraphs
+* Buttons
+* Footer
+* Forms
+* Cards
+
+Maintain proper spacing and readability.
+
+---
+
+### 9. Remove Footer Bottom Announcement Line
+
+Completely remove this footer strip:
+
+“Admissions Open 2026–27 | Limited Seats Available from Nursery to Class 12th | Apply Now | Download Brochure | Admissions”
+
+Remove all related footer links or banners.
+
+---
+
+### 10. Add One More Facility in Top Class Facilities
+
+Keep existing:
+
+* Smart Classroom
+* Science Labs
+* Computer Lab
+* Library
+* Hostel Facility
+* Sports Ground
+* Transportation
+
+Add one more:
+
+**Digital Learning & Activity Room**
+
+Display it with matching card style and icon.
+
+---
+
+### Final Instructions:
+
+Do not change:
+
+* Theme colors (#063d65 and #fe8400)
+* Existing animations
+* Existing layout structure
+* Mobile responsiveness
+* Working forms
+* Brochure functionality
+
+Maintain a clean, professional, trust-building school website focused on admissions and parent engagement.

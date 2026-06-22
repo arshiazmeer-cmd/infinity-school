@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -60,8 +59,8 @@
   --font-sans: var(--app-font-sans);
   --font-serif: var(--app-font-serif);
   --font-mono: var(--app-font-mono);
-  --font-heading: 'Montserrat', sans-serif;
-  --font-poppins: 'Poppins', sans-serif;
+  --font-heading: Verdana, Geneva, Tahoma, sans-serif;
+  --font-poppins: Verdana, Geneva, Tahoma, sans-serif;
 
   --text-xs: 0.75rem;
   --text-xs--line-height: calc(1 / 0.75);
@@ -94,6 +93,11 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Global font override — Verdana */
+*, body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* LIGHT MODE */

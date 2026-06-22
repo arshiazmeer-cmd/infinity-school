@@ -6,7 +6,7 @@ import {
   Trophy, ArrowRight, CheckCircle2, GraduationCap,
   Phone, ChevronRight, HelpCircle,
   Star, Download, Target, Heart, Lightbulb, Award,
-  Bus, Monitor, FlaskConical, Library, Home, Dumbbell
+  Bus, Monitor, FlaskConical, Library, Home, Dumbbell, Tv2
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -106,6 +106,7 @@ export default function HomePage() {
     { icon: <Home size={28} />, name: "Hostel Facility", desc: "Safe, disciplined boarding for boys & girls with hygienic meals." },
     { icon: <Dumbbell size={28} />, name: "Sports Ground", desc: "Open ground for cricket, football, athletics & outdoor activities." },
     { icon: <Bus size={28} />, name: "Transportation", desc: "Safe and reliable bus services covering key routes in Barabanki." },
+    { icon: <Tv2 size={28} />, name: "Digital Learning & Activity Room", desc: "A dedicated space for audio-visual learning, group activities, and skill development workshops." },
   ];
 
   return (
@@ -169,12 +170,12 @@ export default function HomePage() {
                   </Button>
                 </Link>
                 <Link href="/contact">
-                  <Button size="lg" variant="outline" className="border-white text-primary hover:bg-white rounded-full px-8 text-lg h-14">
+                  <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white rounded-full px-8 text-lg h-14 shadow-[0_0_24px_rgba(254,132,0,0.45)]">
                     Book Free Counseling
                   </Button>
                 </Link>
                 <a href="/brochure.pdf" download="IPS-Brochure.pdf">
-                  <Button size="lg" variant="ghost" className="text-white hover:bg-white/10 border border-white/30 rounded-full px-8 text-lg h-14 flex items-center gap-2">
+                  <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white rounded-full px-8 text-lg h-14 shadow-[0_0_24px_rgba(254,132,0,0.45)] flex items-center gap-2">
                     <Download size={18} /> Download Brochure
                   </Button>
                 </a>
@@ -377,17 +378,17 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                name: "Shri Rajiv Sharma",
+                name: "Dr. Nisar Ahmad Nadvi",
                 designation: "Director",
                 message: "At Infinity Public School, we are building not just students but future leaders of the nation. Our vision is to make quality integrated education accessible to every family in Barabanki and beyond. We believe that when schooling and competitive preparation work hand-in-hand, students flourish without pressure.",
               },
               {
-                name: "Shri Anil Kumar",
+                name: "Dr. Arshi Ahmad",
                 designation: "Managing Director",
                 message: "When we founded Infinity, we set out to solve the most pressing challenge facing students today — the burden of attending school and coaching separately. Our integrated model is the answer. Every rupee invested here goes back into creating the finest learning environment for your child.",
               },
               {
-                name: "Dr. S. K. Verma",
+                name: "Mrs. Pooja Rani",
                 designation: "Principal",
                 message: "Our integrated curriculum brings premier competitive coaching into regular school hours, freeing up evenings for self-study and rest. We don't just teach; we mentor. Every child who walks through our gates gets a personalised roadmap, the best resources, and unwavering support to succeed.",
               },

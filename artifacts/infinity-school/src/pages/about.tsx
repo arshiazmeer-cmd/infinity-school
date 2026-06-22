@@ -106,7 +106,7 @@ export default function About() {
                 <div className="w-32 h-32 rounded-full bg-white/15 border-4 border-secondary/50 mb-6 flex items-center justify-center overflow-hidden">
                   <Users size={48} className="text-white/70" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-1">Dr. S. K. Verma</h3>
+                <h3 className="text-2xl font-bold text-white mb-1">Mrs. Pooja Rani</h3>
                 <p className="text-secondary font-semibold text-sm mb-3">Principal</p>
                 <p className="text-xs text-primary-foreground/60">Ph.D. in Education<br />Academic Leader, 15+ Years</p>
               </div>

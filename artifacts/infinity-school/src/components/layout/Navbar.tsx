@@ -55,12 +55,8 @@ export function Navbar() {
       {/* Main Navbar */}
       <div className={`px-6 py-3 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-white"}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-3">
-            <img src={logoImg} alt="Infinity Public School Logo" className="h-12 w-12 object-contain" />
-            <div className="flex flex-col">
-              <span className="text-lg font-heading font-bold text-primary leading-tight">Infinity Public School</span>
-              <span className="text-xs text-muted-foreground font-inter tracking-wide hidden sm:block">Building Future Doctors & Engineers</span>
-            </div>
+          <Link href="/" className="flex items-center gap-2">
+            <img src={logoImg} alt="Infinity Public School Logo" className="h-14 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
@@ -96,8 +92,7 @@ export function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-border flex flex-col p-4 animate-in slide-in-from-top-2">
           <div className="flex items-center gap-3 p-4 mb-2">
-            <img src={logoImg} alt="Infinity Public School" className="h-10 w-10 object-contain" />
-            <span className="font-bold text-primary text-sm">Infinity Public School</span>
+            <img src={logoImg} alt="Infinity Public School" className="h-12 w-auto object-contain" />
           </div>
           {navLinks.map((link) => (
             <Link

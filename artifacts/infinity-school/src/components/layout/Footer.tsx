@@ -1,40 +1,59 @@
 import { Link } from "wouter";
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Download } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 export function Footer() {
   return (
     <footer className="bg-[#042b47] text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-        
+
         {/* Brand Column */}
         <div className="space-y-6">
-          <Link href="/" className="flex flex-col">
-            <span className="text-3xl font-heading font-bold text-white flex items-center gap-2">
-              <span className="text-4xl text-secondary">∞</span> Infinity
-            </span>
-            <span className="text-sm text-gray-300 font-inter tracking-wide mt-1">
-              Public School
-            </span>
+          <Link href="/" className="flex items-center gap-3">
+            <img src={logoImg} alt="Infinity Public School" className="h-14 w-14 object-contain" />
+            <div>
+              <div className="text-lg font-heading font-bold text-white leading-tight">Infinity Public School</div>
+              <div className="text-xs text-gray-300 font-inter tracking-wide">Building Future Doctors & Engineers</div>
+            </div>
           </Link>
           <p className="text-gray-300 text-sm leading-relaxed">
-            Building Future Doctors & Engineers. A premier integrated coaching school combining academic schooling with IIT-JEE and NEET exam preparation under one roof.
+            A premier integrated school combining academic excellence with IIT-JEE and NEET preparation under one roof in Kursi, Barabanki.
           </p>
-          <div className="flex gap-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><Facebook size={18} /></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><Twitter size={18} /></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><Instagram size={18} /></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors"><Youtube size={18} /></a>
+          <div className="flex gap-3">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#1877F2] transition-colors" aria-label="Facebook">
+              <Facebook size={18} />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E1306C] transition-colors" aria-label="Instagram">
+              <Instagram size={18} />
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#FF0000] transition-colors" aria-label="YouTube">
+              <Youtube size={18} />
+            </a>
           </div>
+          <a
+            href="/brochure.pdf"
+            download="IPS-Brochure.pdf"
+            className="inline-flex items-center gap-2 bg-secondary text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-secondary/90 transition-colors"
+          >
+            <Download size={14} /> Download Brochure
+          </a>
         </div>
 
         {/* Quick Links */}
         <div>
           <h3 className="text-lg font-heading font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-1">Quick Links</h3>
           <ul className="space-y-3">
-            {['About Us', 'Our Faculty', 'Toppers & Results', 'Photo Gallery', 'Hostel Facilities', 'FAQs'].map((item) => (
-              <li key={item}>
-                <Link href={`/${item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`} className="text-gray-300 hover:text-secondary transition-colors text-sm flex items-center gap-2">
-                  <span className="text-secondary text-xs">▸</span> {item}
+            {[
+              { label: 'About Us', path: '/about' },
+              { label: 'Our Faculty', path: '/faculty' },
+              { label: 'Photo Gallery', path: '/gallery' },
+              { label: 'Hostel Facilities', path: '/hostel' },
+              { label: 'Admission Process', path: '/admission' },
+              { label: 'FAQs', path: '/faq' },
+            ].map((item) => (
+              <li key={item.path}>
+                <Link href={item.path} className="text-gray-300 hover:text-secondary transition-colors text-sm flex items-center gap-2">
+                  <span className="text-secondary text-xs">▸</span> {item.label}
                 </Link>
               </li>
             ))}
@@ -45,7 +64,7 @@ export function Footer() {
         <div>
           <h3 className="text-lg font-heading font-bold mb-6 text-white border-b-2 border-secondary inline-block pb-1">Programs</h3>
           <ul className="space-y-3">
-            {['Early Foundation (Nur-5)', 'Foundation (6-8)', 'Pre-Foundation (9-10)', 'IIT-JEE Program', 'NEET Program', 'Integrated Schooling'].map((item) => (
+            {['Early Foundation (Nur–5)', 'Foundation (6–8)', 'Pre-Foundation (9–10)', 'IIT-JEE Program', 'NEET Program', 'Integrated Schooling'].map((item) => (
               <li key={item}>
                 <Link href="/admission" className="text-gray-300 hover:text-secondary transition-colors text-sm flex items-center gap-2">
                   <span className="text-secondary text-xs">▸</span> {item}
@@ -65,26 +84,28 @@ export function Footer() {
             </li>
             <li className="flex gap-3 text-sm text-gray-300 items-center">
               <Phone size={18} className="text-secondary shrink-0" />
-              <span>+91 9118502112</span>
+              <a href="tel:+919118502112" className="hover:text-secondary transition-colors">+91 9118502112</a>
             </li>
             <li className="flex gap-3 text-sm text-gray-300 items-center">
               <Mail size={18} className="text-secondary shrink-0" />
-              <span>ipskursi@gmail.com</span>
+              <a href="mailto:ipskursi@gmail.com" className="hover:text-secondary transition-colors">ipskursi@gmail.com</a>
             </li>
           </ul>
-          <div className="mt-6">
-            <span className="inline-block bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-              Admissions Open 2025-26
+          <div className="mt-6 flex flex-col gap-2">
+            <span className="inline-block bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider w-fit">
+              Admissions Open 2026–27
             </span>
+            <span className="text-xs text-gray-400">Limited Seats Available</span>
           </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-        <p>© {new Date().getFullYear()} Infinity Public School. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Infinity Public School, Kursi, Barabanki. All rights reserved.</p>
         <div className="flex gap-4">
-          <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-          <Link href="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
+          <Link href="/faq" className="hover:text-white transition-colors">FAQs</Link>
+          <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+          <Link href="/admission" className="hover:text-white transition-colors">Admission</Link>
         </div>
       </div>
     </footer>

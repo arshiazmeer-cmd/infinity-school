@@ -1,29 +1,26 @@
-import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { 
-  BookOpen, Users, Building, ShieldCheck, 
-  Trophy, ArrowRight, CheckCircle2, GraduationCap, 
-  Clock, MapPin, Phone, ChevronRight, HelpCircle,
-  Star
+import {
+  BookOpen, Users, Building, ShieldCheck,
+  Trophy, ArrowRight, CheckCircle2, GraduationCap,
+  Phone, ChevronRight, HelpCircle,
+  Star, Download, Target, Heart, Lightbulb, Award,
+  Bus, Monitor, FlaskConical, Library, Home, Dumbbell
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
 
 import heroBg from "@/assets/hero.png";
 import faculty1 from "@/assets/faculty-1.png";
 import faculty2 from "@/assets/faculty-2.png";
 import faculty3 from "@/assets/faculty-3.png";
 import faculty4 from "@/assets/faculty-4.png";
-import topper1 from "@/assets/topper-1.png";
-import topper2 from "@/assets/topper-2.png";
 import facility1 from "@/assets/facility-1.png";
 import facility2 from "@/assets/facility-2.png";
 import facility3 from "@/assets/facility-3.png";
 
-export default function Home() {
+export default function HomePage() {
   const faqs = [
     {
       q: "What is the admission process for the Integrated Program?",
@@ -36,56 +33,125 @@ export default function Home() {
     {
       q: "Are there any scholarships available?",
       a: "Yes, we offer up to 100% scholarships to meritorious students based on their performance in our Admission cum Scholarship Test (AST)."
-    }
+    },
+    {
+      q: "From which class can a student enroll at Infinity Public School?",
+      a: "We welcome students from Nursery all the way to Class 12. Our Early Foundation program starts from Nursery and builds strong academic habits from the very beginning."
+    },
+    {
+      q: "Is the school CBSE affiliated?",
+      a: "Yes, Infinity Public School follows the CBSE curriculum and ensures students meet all board requirements while simultaneously preparing for competitive exams."
+    },
   ];
 
   const testimonials = [
-    { name: "Suresh Gupta", relation: "Parent of Class 11 Student", text: "The integrated approach at Infinity saved my son from the exhaustion of attending school and coaching separately. He is now much more relaxed and his mock test scores are improving steadily.", rating: 5 },
-    { name: "Rahul Sharma", relation: "JEE Advanced 2023 Qualifier", text: "The faculty here is top-notch. They clear doubts patiently and the test series exactly mirrors the real exam pattern. I owe my success entirely to the mentors here.", rating: 5 },
-    { name: "Anita Yadav", relation: "Parent of Class 9 Student", text: "We shifted our daughter to the pre-foundation batch and the change in her analytical thinking is remarkable. The environment is competitive yet highly supportive.", rating: 5 },
-    { name: "Sneha Singh", relation: "NEET 2023 Qualifier", text: "The biology department is outstanding. The hostel facility meant I didn't waste any time commuting. It truly is a premium institute in Barabanki.", rating: 5 }
+    {
+      name: "Reena Devi",
+      relation: "Parent of Nursery Student",
+      text: "I am extremely happy with the way teachers handle young children here. The classroom environment is joyful and structured. My son looks forward to school every morning!",
+      rating: 5,
+      tag: "Nursery Section"
+    },
+    {
+      name: "Rajesh Verma",
+      relation: "Parent of Class 3 Student",
+      text: "The primary section teachers are very attentive and caring. My daughter has improved remarkably in reading and maths in just six months. Best decision we made.",
+      rating: 5,
+      tag: "Primary Section"
+    },
+    {
+      name: "Sunita Yadav",
+      relation: "Parent of Class 7 Student",
+      text: "The foundation batch has given my son a completely different perspective on science and maths. His confidence has grown tremendously. The school maintains excellent discipline.",
+      rating: 5,
+      tag: "Junior Section"
+    },
+    {
+      name: "Amit Srivastava",
+      relation: "Parent of Class 9 Student",
+      text: "The pre-foundation program is outstanding. My daughter is now solving problems that most Class 10 students struggle with. The faculty's dedication is unmatched in this region.",
+      rating: 5,
+      tag: "Junior Section"
+    },
+    {
+      name: "Pratibha Singh",
+      relation: "Parent of Class 11 (NEET) Student",
+      text: "Shifting to Infinity's integrated program was the best decision for my son. He no longer has the stress of attending a separate coaching institute. The results speak for themselves.",
+      rating: 5,
+      tag: "Senior Section"
+    },
+    {
+      name: "Manoj Kumar Gupta",
+      relation: "Parent of Class 12 (JEE) Student",
+      text: "The faculty here is at par with the best coaching institutions in the country. The test series and personalized mentorship have shaped my daughter into a focused, confident student.",
+      rating: 5,
+      tag: "Senior Section"
+    },
+  ];
+
+  const courses = [
+    { level: "Nursery – Class 5", name: "Early Foundation", highlight: "Building curiosity, literacy, and numeracy from the ground up with a joyful learning environment.", accent: "bg-amber-500" },
+    { level: "Classes 6–8", name: "Foundation Program", highlight: "Building strong fundamentals in Science & Maths for competitive readiness.", accent: "bg-secondary" },
+    { level: "Classes 9–10", name: "Pre-Foundation", highlight: "Early preparation for NTSE, Olympiads, Boards & competitive entrance exams.", accent: "bg-secondary" },
+    { level: "Classes 11–12", name: "IIT-JEE Integrated", highlight: "Rigorous, focused training for JEE Main & Advanced alongside CBSE board prep.", accent: "bg-secondary" },
+    { level: "Classes 11–12", name: "NEET Integrated", highlight: "Comprehensive preparation for NEET (UG) with expert Biology, Chemistry & Physics faculty.", accent: "bg-secondary" },
+    { level: "Classes 6–12", name: "School + Coaching Integration", highlight: "One campus. One schedule. No separate coaching. The Infinity Advantage at its fullest.", accent: "bg-primary" },
+  ];
+
+  const facilities = [
+    { icon: <Monitor size={28} />, name: "Smart Classrooms", desc: "Digital boards, projectors, and interactive learning tools." },
+    { icon: <FlaskConical size={28} />, name: "Science Labs", desc: "Fully equipped Physics, Chemistry & Biology labs for practical learning." },
+    { icon: <Monitor size={28} />, name: "Computer Lab", desc: "High-speed internet and modern systems for digital education." },
+    { icon: <Library size={28} />, name: "Library", desc: "A rich collection of academic books, reference material & periodicals." },
+    { icon: <Home size={28} />, name: "Hostel Facility", desc: "Safe, disciplined boarding for boys & girls with hygienic meals." },
+    { icon: <Dumbbell size={28} />, name: "Sports Ground", desc: "Open ground for cricket, football, athletics & outdoor activities." },
+    { icon: <Bus size={28} />, name: "Transportation", desc: "Safe and reliable bus services covering key routes in Barabanki." },
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* 2. Admission Open Banner */}
-      <div className="bg-primary text-secondary overflow-hidden py-2 whitespace-nowrap">
-        <div className="inline-block animate-[marquee_20s_linear_infinite]">
-          <span className="text-sm font-bold tracking-wider uppercase flex items-center gap-4">
-            <span>🎓 Admissions Open 2025-26</span>
-            <span>|</span>
-            <span>Limited Seats</span>
-            <span>|</span>
-            <span><Link href="/admission" className="underline hover:text-white transition-colors">Apply Now</Link></span>
-            <span className="ml-4">🎓 Admissions Open 2025-26</span>
-            <span>|</span>
-            <span>Limited Seats</span>
-            <span>|</span>
-            <span><Link href="/admission" className="underline hover:text-white transition-colors">Apply Now</Link></span>
+
+      {/* Admission Open Banner */}
+      <div className="bg-primary text-secondary overflow-hidden py-2.5 whitespace-nowrap border-b-2 border-secondary/30">
+        <div className="inline-flex animate-[marquee_25s_linear_infinite]">
+          <span className="text-sm font-bold tracking-wider uppercase flex items-center gap-6 pr-8">
+            <span>Admissions Open 2026–27</span>
+            <span className="text-white/50">|</span>
+            <span className="text-white font-medium">Limited Seats Available from Nursery to Class 12th</span>
+            <span className="text-white/50">|</span>
+            <Link href="/admission" className="underline hover:text-white transition-colors">Apply Now</Link>
+            <span className="text-white/50">|</span>
+            <a href="/brochure.pdf" download className="underline hover:text-white transition-colors">Download Brochure</a>
+            <span className="text-white/50 ml-8">|</span>
+            <span>Admissions Open 2026–27</span>
+            <span className="text-white/50">|</span>
+            <span className="text-white font-medium">Limited Seats Available from Nursery to Class 12th</span>
+            <span className="text-white/50">|</span>
+            <Link href="/admission" className="underline hover:text-white transition-colors">Apply Now</Link>
           </span>
         </div>
       </div>
 
-      {/* 3. Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src={heroBg} 
-            alt="Students in modern classroom" 
+          <img
+            src={heroBg}
+            alt="Students in modern classroom"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/96 via-primary/82 to-primary/35" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 pt-20 pb-32">
+        <div className="relative z-10 container mx-auto px-6 pt-24 pb-36">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary border border-secondary/30 font-semibold tracking-wide text-sm mb-6">
-                Premium Integrated School
+              <span className="inline-block py-1 px-4 rounded-full bg-secondary/20 text-secondary border border-secondary/40 font-semibold tracking-wide text-sm mb-6">
+                Premium Integrated School — Barabanki
               </span>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white leading-tight mb-6">
                 Barabanki's Premier <br />
@@ -93,12 +159,12 @@ export default function Home() {
                 for IIT-JEE & NEET
               </h1>
               <p className="text-xl text-gray-200 mb-10 font-inter max-w-2xl leading-relaxed">
-                Academic Excellence + Competitive Preparation Under One Roof. Give your child the foundation they need to succeed in national-level examinations without compromising their schooling.
+                Academic Excellence + Competitive Preparation Under One Roof. Give your child the foundation they need to succeed in national-level examinations.
               </p>
-              
+
               <div className="flex flex-wrap gap-4 mb-16">
                 <Link href="/admission">
-                  <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white rounded-full px-8 text-lg h-14 shadow-[0_0_20px_rgba(254,132,0,0.4)]">
+                  <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white rounded-full px-8 text-lg h-14 shadow-[0_0_24px_rgba(254,132,0,0.45)]">
                     Apply Now
                   </Button>
                 </Link>
@@ -107,11 +173,11 @@ export default function Home() {
                     Book Free Counseling
                   </Button>
                 </Link>
-                <Link href="/about">
-                  <Button size="lg" variant="ghost" className="text-white hover:bg-white/10 rounded-full px-8 text-lg h-14">
-                    Download Brochure
+                <a href="/brochure.pdf" download="IPS-Brochure.pdf">
+                  <Button size="lg" variant="ghost" className="text-white hover:bg-white/10 border border-white/30 rounded-full px-8 text-lg h-14 flex items-center gap-2">
+                    <Download size={18} /> Download Brochure
                   </Button>
-                </Link>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -122,12 +188,12 @@ export default function Home() {
           <div className="container mx-auto px-6 py-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/20">
               {[
-                { label: "Students", value: "500+" },
-                { label: "Success Rate", value: "95%" },
-                { label: "Years Experience", value: "10+" },
-                { label: "Top Rankers", value: "50+" },
+                { label: "Students Enrolled", value: "450+" },
+                { label: "Years Established", value: "3+" },
+                { label: "Expert Faculty", value: "20+" },
+                { label: "Scholarship Seats", value: "100%" },
               ].map((stat, i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -135,7 +201,7 @@ export default function Home() {
                   className="text-center px-4"
                 >
                   <div className="text-3xl font-bold text-secondary mb-1">{stat.value}</div>
-                  <div className="text-sm font-medium text-white uppercase tracking-wider">{stat.label}</div>
+                  <div className="text-xs font-semibold text-white uppercase tracking-wider">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -143,33 +209,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Notice Board / Latest Updates */}
-      <section className="py-12 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="bg-white rounded-2xl shadow-sm border border-border p-6 flex flex-col md:flex-row items-center gap-6">
-            <div className="flex items-center gap-3 shrink-0 bg-primary/5 text-primary px-4 py-2 rounded-lg font-semibold">
-              <Clock className="text-secondary" size={20} />
-              Latest Updates
-            </div>
-            <div className="overflow-hidden relative w-full h-8">
-              <div className="absolute top-0 left-0 w-full animate-[marquee_15s_linear_infinite] whitespace-nowrap text-muted-foreground">
-                <span className="mx-4 inline-flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-secondary"></div> Scholarship Test Date Announced: 15th Oct 2024</span>
-                <span className="mx-4 inline-flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-secondary"></div> Class 11th Foundation Batch Starting from 1st April</span>
-                <span className="mx-4 inline-flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-secondary"></div> NEET 2024 Results Declared - 5 Selections!</span>
+      {/* About Infinity Public School Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-y-[-30%] translate-x-[30%]"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <h2 className="text-sm font-bold text-secondary tracking-widest uppercase mb-3">Who We Are</h2>
+              <h3 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-6 leading-tight">
+                About Infinity Public School
+              </h3>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                Infinity Public School is a premier educational institution in Kursi, Barabanki, where academic schooling and competitive exam preparation are seamlessly integrated under one roof. Founded with the vision of eliminating the dual pressure students face from managing school and coaching separately, we have built a focused, disciplined, and aspirational learning ecosystem.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Our curriculum is CBSE-aligned and simultaneously prepares students for IIT-JEE, NEET, and other national-level examinations — from Nursery foundations to Class 12 advanced programs.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: <Target size={20} />, label: "Clear Academic Vision" },
+                  { icon: <Award size={20} />, label: "Excellence in Results" },
+                  { icon: <Heart size={20} />, label: "Holistic Development" },
+                  { icon: <Lightbulb size={20} />, label: "Competitive Preparation" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                    <span className="text-secondary">{item.icon}</span>
+                    <span className="text-sm font-semibold text-primary">{item.label}</span>
+                  </div>
+                ))}
               </div>
-            </div>
-            <Link href="/blog" className="shrink-0 text-sm font-semibold text-primary hover:text-secondary flex items-center gap-1">
-              View All <ArrowRight size={16} />
-            </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="space-y-6"
+            >
+              {[
+                { title: "Our Vision", content: "To be the leading integrated school in Uttar Pradesh, where every student achieves board excellence and competitive exam success without the stress of managing dual schedules." },
+                { title: "Our Mission", content: "Bring world-class educators and coaching methodology to Barabanki. Deliver CBSE academics and JEE/NEET preparation together, enabling students to study smarter and live better." },
+                { title: "Academic Excellence", content: "We don't compromise on either front. Strong CBSE fundamentals are the backbone of our programs, complemented by intensive competitive exam preparation from early stages." },
+                { title: "Discipline & Values", content: "Infinity nurtures ethical, disciplined, and socially aware students who are prepared not just for exams, but for life's challenges with confidence and integrity." },
+              ].map((item, i) => (
+                <div key={i} className="p-5 rounded-2xl border border-border bg-muted/30 hover:border-primary/20 hover:bg-white transition-all">
+                  <h4 className="font-bold text-primary mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.content}</p>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* 5. Why Choose Infinity Public School */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      {/* Why Choose Infinity */}
+      <section className="py-24 bg-muted relative overflow-hidden">
         <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-y-1/2 translate-x-1/3"></div>
-        
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-sm font-bold text-secondary tracking-widest uppercase mb-2">The Infinity Advantage</h2>
@@ -179,14 +280,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: <Building className="text-secondary" size={32} />, title: "Integrated Schooling", desc: "No need for separate coaching. We cover CBSE curriculum alongside JEE/NEET prep during regular school hours." },
+              { icon: <Building className="text-secondary" size={32} />, title: "Integrated Schooling", desc: "No need for separate coaching. We cover the CBSE curriculum alongside JEE/NEET prep during regular school hours." },
               { icon: <Users className="text-secondary" size={32} />, title: "Expert Faculty", desc: "Learn from top-tier educators with proven track records from reputed national institutes and premier colleges." },
               { icon: <ShieldCheck className="text-secondary" size={32} />, title: "Hostel Facility", desc: "Safe, secure, and disciplined boarding facilities with hygienic food and dedicated doubt-clearing sessions." },
               { icon: <BookOpen className="text-secondary" size={32} />, title: "Regular Test Series", desc: "All-India level mock tests with detailed performance analysis to track progress and identify weak areas." },
-              { icon: <GraduationCap className="text-secondary" size={32} />, title: "Personalized Mentorship", desc: "One-on-one attention with dedicated mentors who guide students through academic and psychological challenges." },
+              { icon: <GraduationCap className="text-secondary" size={32} />, title: "Personalized Mentorship", desc: "One-on-one attention with dedicated mentors who guide students through academic and personal challenges." },
               { icon: <Trophy className="text-secondary" size={32} />, title: "Competitive Environment", desc: "A peer group of highly motivated students that inspires healthy competition and mutual growth." },
             ].map((feature, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -205,65 +306,118 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Courses Offered */}
+      {/* Courses Offered */}
       <section className="py-24 bg-primary text-white">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Academic Programs</h2>
             <h3 className="text-3xl md:text-5xl font-heading font-bold mb-6">Courses Designed for Success</h3>
-            <p className="text-primary-foreground/80 text-lg">From early foundation to advanced competitive preparation.</p>
+            <p className="text-primary-foreground/80 text-lg">From early childhood foundation to advanced competitive preparation — one school, every stage.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { level: "Classes 6-8", name: "Foundation Program", highlight: "Building strong fundamentals in Science & Maths." },
-              { level: "Classes 9-10", name: "Pre-Foundation", highlight: "Early preparation for NTSE, Olympiads & Boards." },
-              { level: "Classes 11-12", name: "IIT-JEE Integrated", highlight: "Rigorous training for JEE Main & Advanced." },
-              { level: "Classes 11-12", name: "NEET Integrated", highlight: "Comprehensive preparation for Medical entrances." },
-            ].map((course, i) => (
-              <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors">
-                <span className="inline-block py-1 px-3 rounded-full bg-secondary text-white text-xs font-bold mb-4">
+            {courses.map((course, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors"
+              >
+                <span className={`inline-block py-1 px-3 rounded-full ${course.accent} text-white text-xs font-bold mb-4`}>
                   {course.level}
                 </span>
                 <h4 className="text-2xl font-bold mb-3">{course.name}</h4>
-                <p className="text-primary-foreground/70 mb-8 h-12">{course.highlight}</p>
+                <p className="text-primary-foreground/70 mb-8 leading-relaxed">{course.highlight}</p>
                 <Link href="/admission">
                   <Button className="w-full bg-white text-primary hover:bg-gray-100 group">
                     Enquire Now <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 8. Key Stats / Achievements Banner */}
+      {/* Key Stats Banner */}
       <section className="py-16 bg-gradient-to-r from-primary to-[#095a96] border-y-4 border-secondary text-white">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl font-heading font-bold mb-10">A Legacy of Consistent Results</h2>
+          <h2 className="text-2xl font-heading font-bold mb-10">Our Growing Legacy</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">500+</div>
+              <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">450+</div>
               <div className="text-sm font-semibold tracking-wider">STUDENTS ENROLLED</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">150+</div>
-              <div className="text-sm font-semibold tracking-wider">IIT/NEET SELECTIONS</div>
+              <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">3+</div>
+              <div className="text-sm font-semibold tracking-wider">YEARS OF ESTABLISHMENT</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">95%</div>
-              <div className="text-sm font-semibold tracking-wider">BOARD RESULT</div>
+              <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">20+</div>
+              <div className="text-sm font-semibold tracking-wider">EXPERT FACULTY</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">10+</div>
-              <div className="text-sm font-semibold tracking-wider">YEARS OF EXCELLENCE</div>
+              <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">100%</div>
+              <div className="text-sm font-semibold tracking-wider">SCHOLARSHIP AVAILABLE</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 7. Faculty Section Preview */}
+      {/* Leadership Messages */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Leadership</h2>
+            <h3 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-4">Messages from Our Leaders</h3>
+            <p className="text-muted-foreground">Guided by vision, driven by commitment to every student's success.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Shri Rajiv Sharma",
+                designation: "Director",
+                message: "At Infinity Public School, we are building not just students but future leaders of the nation. Our vision is to make quality integrated education accessible to every family in Barabanki and beyond. We believe that when schooling and competitive preparation work hand-in-hand, students flourish without pressure.",
+              },
+              {
+                name: "Shri Anil Kumar",
+                designation: "Managing Director",
+                message: "When we founded Infinity, we set out to solve the most pressing challenge facing students today — the burden of attending school and coaching separately. Our integrated model is the answer. Every rupee invested here goes back into creating the finest learning environment for your child.",
+              },
+              {
+                name: "Dr. S. K. Verma",
+                designation: "Principal",
+                message: "Our integrated curriculum brings premier competitive coaching into regular school hours, freeing up evenings for self-study and rest. We don't just teach; we mentor. Every child who walks through our gates gets a personalised roadmap, the best resources, and unwavering support to succeed.",
+              },
+            ].map((leader, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="bg-muted rounded-3xl overflow-hidden border border-border shadow-sm hover:shadow-lg transition-shadow"
+              >
+                <div className="bg-primary p-8 flex flex-col items-center text-center">
+                  <div className="w-24 h-24 rounded-full bg-white/15 border-4 border-secondary/50 flex items-center justify-center mb-4">
+                    <Users size={40} className="text-white/70" />
+                  </div>
+                  <h4 className="text-xl font-bold text-white">{leader.name}</h4>
+                  <p className="text-secondary font-semibold text-sm mt-1">{leader.designation}</p>
+                </div>
+                <div className="p-8">
+                  <div className="text-secondary text-4xl font-serif leading-none mb-2">"</div>
+                  <p className="text-muted-foreground text-sm leading-relaxed italic">{leader.message}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Faculty Section Preview */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
@@ -300,103 +454,83 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. Toppers Wall */}
+      {/* Top Class Facilities */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Hall of Fame</h2>
-            <h3 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-6">Our Proud Achievers</h3>
+            <h2 className="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Infrastructure</h2>
+            <h3 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-4">Top Class Facilities</h3>
+            <p className="text-muted-foreground text-lg">An environment built for focused learning, holistic development, and overall well-being.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          {/* Feature image strip */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {[
-              { rank: "AIR 142", name: "Rohan Srivastava", exam: "JEE Advanced", img: topper1 },
-              { rank: "AIR 210", name: "Ananya Gupta", exam: "NEET 2024", img: topper2 },
-              { rank: "AIR 560", name: "Aryan Singh", exam: "JEE Advanced", img: topper1 },
-              { rank: "AIR 845", name: "Shruti Verma", exam: "NEET 2024", img: topper2 },
-            ].map((t, i) => (
-              <div key={i} className="bg-muted p-6 rounded-2xl border border-border text-center hover:border-primary/20 hover:shadow-md transition-all">
-                <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-white shadow-sm mb-4">
-                  <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
+              { img: facility1, label: "Smart Classrooms" },
+              { img: facility2, label: "Advanced Science Labs" },
+              { img: facility3, label: "Premium Hostel Facility" },
+            ].map((item, i) => (
+              <div key={i} className="group relative rounded-2xl overflow-hidden aspect-video shadow-md">
+                <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex items-end p-6">
+                  <h4 className="text-white font-bold text-xl">{item.label}</h4>
                 </div>
-                <div className="inline-block px-3 py-1 bg-secondary/10 text-secondary font-bold text-sm rounded-full mb-2">
-                  {t.rank}
-                </div>
-                <h4 className="font-bold text-lg text-primary">{t.name}</h4>
-                <p className="text-muted-foreground text-sm">{t.exam}</p>
               </div>
             ))}
           </div>
+
+          {/* Facility cards grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {facilities.map((fac, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.07 }}
+                className="flex flex-col items-center text-center p-6 bg-muted rounded-2xl border border-border hover:border-primary/20 hover:bg-white hover:shadow-md transition-all group"
+              >
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-secondary mb-4 group-hover:scale-110 transition-transform">
+                  {fac.icon}
+                </div>
+                <h4 className="font-bold text-primary text-sm mb-1">{fac.name}</h4>
+                <p className="text-xs text-muted-foreground leading-relaxed">{fac.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+
           <div className="text-center mt-10">
-            <Link href="/results">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white rounded-full">
-                View All Results
+            <Link href="/gallery">
+              <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8">
+                View Full Gallery <ArrowRight size={16} className="ml-2" />
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 9. Campus Facilities */}
+      {/* Admission Process & Scholarship */}
       <section className="py-24 bg-muted">
-        <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Infrastructure</h2>
-            <h3 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-6">World-Class Facilities</h3>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="group relative rounded-2xl overflow-hidden aspect-video md:col-span-2 shadow-sm">
-              <img src={facility1} alt="Smart Classrooms" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex items-end p-6">
-                <h4 className="text-white font-bold text-2xl">Smart Classrooms</h4>
-              </div>
-            </div>
-            <div className="group relative rounded-2xl overflow-hidden aspect-video shadow-sm">
-              <img src={facility2} alt="Science Labs" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex items-end p-6">
-                <h4 className="text-white font-bold text-xl">Advanced Science Labs</h4>
-              </div>
-            </div>
-            <div className="group relative rounded-2xl overflow-hidden aspect-video shadow-sm">
-              <img src={facility3} alt="Premium Hostel" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex items-end p-6">
-                <h4 className="text-white font-bold text-xl">Premium Hostel Facility</h4>
-              </div>
-            </div>
-            <div className="group relative rounded-2xl overflow-hidden aspect-video md:col-span-2 shadow-sm bg-primary flex flex-col justify-center items-center text-center p-8">
-              <h4 className="text-white font-bold text-2xl mb-4">Experience Our Campus</h4>
-              <p className="text-primary-foreground/80 mb-6 max-w-md">Discover an environment built for focused learning, holistic development, and overall well-being.</p>
-              <Link href="/gallery">
-                <Button className="bg-secondary hover:bg-secondary/90 text-white rounded-full">
-                  View Full Gallery
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 12. Admission Process & 13. Scholarship */}
-      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Admission Process</h2>
               <h3 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-10">4 Steps to Excellence</h3>
-              
-              <div className="space-y-8 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
+
+              <div className="space-y-6">
                 {[
-                  { step: "01", title: "Submit Inquiry", desc: "Fill out the online form or visit our campus for counseling." },
-                  { step: "02", title: "Entrance Test", desc: "Appear for our AST (Admission cum Scholarship Test)." },
-                  { step: "03", title: "Counseling", desc: "Meet experts to discuss test results and choose the right program." },
-                  { step: "04", title: "Enrollment", desc: "Complete documentation and secure your seat." },
+                  { step: "01", title: "Submit Inquiry", desc: "Fill out the online form or visit our campus for an initial discussion with our admission team." },
+                  { step: "02", title: "Counseling Session", desc: "Meet our academic experts to understand the right program for your child's age and goals." },
+                  { step: "03", title: "Entrance / Scholarship Test", desc: "Appear for our AST (Admission cum Scholarship Test) to assess eligibility and earn scholarships." },
+                  { step: "04", title: "Enrollment & Confirmation", desc: "Complete documentation, fee payment, and secure your seat for the academic year." },
                 ].map((s, i) => (
-                  <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-secondary text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                  <div key={i} className="flex items-start gap-5">
+                    <div className="w-12 h-12 rounded-full bg-secondary text-white font-bold text-lg flex items-center justify-center shrink-0 shadow-md">
                       {s.step}
                     </div>
-                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 bg-muted rounded-2xl border border-border shadow-sm">
-                      <h4 className="font-bold text-primary text-lg mb-1">{s.title}</h4>
-                      <p className="text-muted-foreground text-sm">{s.desc}</p>
+                    <div className="flex-1 p-5 bg-white rounded-2xl border border-border shadow-sm">
+                      <h4 className="font-bold text-primary text-base mb-1">{s.title}</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -405,7 +539,6 @@ export default function Home() {
 
             <div className="bg-primary rounded-3xl p-10 text-white relative overflow-hidden shadow-2xl">
               <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-              
               <div className="relative z-10">
                 <span className="inline-block py-1 px-3 rounded-full bg-secondary text-white text-xs font-bold mb-6">
                   SCHOLARSHIP PROGRAM
@@ -415,18 +548,16 @@ export default function Home() {
                   We believe that financial constraints should never stand in the way of true talent. Our Infinity Admission cum Scholarship Test (IAST) offers bright minds the opportunity to study with up to 100% fee waiver.
                 </p>
                 <ul className="space-y-4 mb-10">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="text-secondary" size={20} />
-                    <span>Based on merit and test performance</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="text-secondary" size={20} />
-                    <span>Available for classes 6th to 12th</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="text-secondary" size={20} />
-                    <span>Special concessions for siblings and alumni</span>
-                  </li>
+                  {[
+                    "Based on merit and test performance",
+                    "Available for classes Nursery to 12th",
+                    "Special concessions for siblings and alumni",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <CheckCircle2 className="text-secondary" size={20} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
                 <Link href="/admission">
                   <Button className="w-full bg-secondary hover:bg-secondary/90 text-white h-14 text-lg">
@@ -439,29 +570,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 11. Testimonials */}
-      <section className="py-24 bg-muted">
+      {/* Testimonials */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Testimonials</h2>
-            <h3 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-6">What Parents & Students Say</h3>
+            <h3 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-4">What Parents Say About Us</h3>
+            <p className="text-muted-foreground">Trusted by parents from Nursery to Class 12 across Barabanki and neighbouring districts.</p>
           </div>
-          
+
           <div className="max-w-5xl mx-auto">
             <Carousel opts={{ align: "start", loop: true }} className="w-full">
               <CarouselContent>
                 {testimonials.map((t, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2 pl-4">
-                    <div className="p-8 h-full bg-white rounded-2xl border border-border shadow-sm flex flex-col justify-between">
+                  <CarouselItem key={index} className="md:basis-1/2 pl-4">
+                    <div className="p-8 h-full bg-muted rounded-2xl border border-border shadow-sm flex flex-col justify-between">
                       <div>
-                        <div className="flex gap-1 mb-4 text-secondary">
-                          {[...Array(t.rating)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="flex gap-1 text-secondary">
+                            {[...Array(t.rating)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
+                          </div>
+                          <span className="text-xs font-bold text-secondary bg-secondary/10 px-2 py-1 rounded-full">{t.tag}</span>
                         </div>
-                        <p className="text-muted-foreground italic mb-6 leading-relaxed">"{t.text}"</p>
+                        <p className="text-muted-foreground italic mb-6 leading-relaxed text-sm">"{t.text}"</p>
                       </div>
                       <div>
                         <h4 className="font-bold text-primary">{t.name}</h4>
-                        <p className="text-sm text-muted-foreground">{t.relation}</p>
+                        <p className="text-xs text-muted-foreground">{t.relation}</p>
                       </div>
                     </div>
                   </CarouselItem>
@@ -476,23 +611,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 14. FAQ Section */}
-      <section className="py-24 bg-white">
+      {/* FAQ Section */}
+      <section className="py-24 bg-muted">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">Frequently Asked Questions</h2>
+            <h2 className="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Common Questions</h2>
+            <h3 className="text-3xl md:text-4xl font-heading font-bold text-primary">Frequently Asked Questions</h3>
           </div>
-          <div className="bg-muted p-8 rounded-2xl border border-border">
+          <div className="bg-white p-8 rounded-2xl border border-border shadow-sm">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="border-b border-border last:border-0">
-                  <AccordionTrigger className="text-left text-lg font-semibold text-primary py-6 hover:text-secondary">
+                  <AccordionTrigger className="text-left text-base font-semibold text-primary py-5 hover:text-secondary">
                     <span className="flex items-center gap-3">
-                      <HelpCircle className="text-secondary shrink-0" size={20} />
+                      <HelpCircle className="text-secondary shrink-0" size={18} />
                       {faq.q}
                     </span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-base pb-6 pl-8 leading-relaxed">
+                  <AccordionContent className="text-muted-foreground text-sm pb-5 pl-8 leading-relaxed">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -506,15 +642,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-      {/* 15. Contact Preview / CTA */}
-      <section className="py-24 bg-white relative overflow-hidden pt-0">
-        <div className="container mx-auto px-6 relative z-10">
+
+      {/* CTA Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
           <div className="bg-primary rounded-3xl overflow-hidden shadow-2xl">
             <div className="grid md:grid-cols-2">
               <div className="p-12 md:p-16 flex flex-col justify-center">
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Ready to shape your child's future?</h2>
-                <p className="text-primary-foreground/80 mb-8 text-lg">Admissions are open for the academic session 2025-26. Book a free counseling session today.</p>
+                <p className="text-primary-foreground/80 mb-8 text-lg">Admissions are open for 2026–27 from Nursery to Class 12. Limited seats. Book a free counseling session today.</p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/admission">
                     <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white rounded-full">
@@ -523,24 +659,29 @@ export default function Home() {
                   </Link>
                   <a href="tel:+919118502112">
                     <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 rounded-full w-full sm:w-auto">
-                      <Phone className="mr-2 w-5 h-5" /> Call Us
+                      <Phone className="mr-2 w-5 h-5" /> Call Us Now
+                    </Button>
+                  </a>
+                  <a href="/brochure.pdf" download>
+                    <Button size="lg" variant="ghost" className="text-white hover:bg-white/10 border border-white/20 rounded-full w-full sm:w-auto">
+                      <Download className="mr-2 w-5 h-5" /> Brochure
                     </Button>
                   </a>
                 </div>
               </div>
               <div className="relative min-h-[300px] bg-secondary/10 flex items-center justify-center p-12">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-transparent opacity-50 z-0"></div>
-                <div className="relative z-10 text-center space-y-6">
-                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto text-secondary shadow-xl">
-                    <MapPin size={32} />
+                <div className="relative z-10 text-center space-y-4">
+                  <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto shadow-xl">
+                    <GraduationCap size={36} className="text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">Visit Our Campus</h3>
-                  <p className="text-white/80">
-                    Infinity Public School<br />
-                    Kursi, Barabanki<br />
-                    Uttar Pradesh, India
+                  <h3 className="text-2xl font-bold text-white">Admissions Open 2026–27</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    Nursery to Class 12<br />
+                    Limited Seats Available<br />
+                    Kursi, Barabanki, UP
                   </p>
-                  <Link href="/contact" className="inline-block text-secondary font-semibold hover:underline">
+                  <Link href="/contact" className="inline-block text-secondary font-semibold hover:underline text-sm">
                     Get Directions &rarr;
                   </Link>
                 </div>

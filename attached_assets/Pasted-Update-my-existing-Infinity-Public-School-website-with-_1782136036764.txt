@@ -1,0 +1,192 @@
+Update my existing Infinity Public School website with the following modifications while keeping the current premium UI, theme colors (#063d65 and #fe8400), animations, responsiveness, and overall design consistency intact.
+
+Required Updates:
+1. Change Logo
+Replace the current logo with the new uploaded logo.
+Update it in:
+Navbar
+Footer
+Mobile Menu
+Favicon
+2. Admission Open 2026–27
+
+Add a prominent admission banner on the homepage.
+
+Text:
+Admissions Open 2026–27
+“Limited Seats Available from Nursery to Class 12th”
+
+Add CTA buttons:
+
+Apply Now
+Download Brochure
+
+Use orange (#fe8400) for high visibility.
+
+3. Attach Brochure
+
+Add downloadable brochure button in:
+
+Hero section
+Navbar
+Footer
+
+Make it downloadable PDF.
+
+4. Update Statistics Section
+
+Edit the stats section as:
+
+✔ 450+ Students
+✔ 3+ Years of Establishment
+
+Remove:
+✖ 150+ IIT/NEET Selections
+✖ 95% Board Results
+
+Use animated counters.
+
+5. Remove Latest Updates Section
+
+Completely remove the “Latest Updates” or “News & Updates” section from the homepage.
+
+6. Add New Course
+
+In Courses Offered section, add:
+
+Early Foundation (Nursery to Class 5)
+
+Updated course structure:
+
+Early Foundation (Nursery–5)
+Foundation (6–8)
+Pre-Foundation (9–10)
+IIT-JEE Program (11–12)
+NEET Program (11–12)
+Integrated School + Coaching Program
+7. Update Testimonials
+
+Replace existing student-only testimonials with:
+
+Parent Reviews from Nursery to Class 12th
+
+Create slider format for:
+
+Nursery parents
+Primary parents
+Junior section parents
+Senior section parents
+8. Add Map + Social Media
+
+In Contact section add:
+
+Google Maps integration
+Instagram icon/link
+Facebook icon/link
+
+Also add them in footer.
+
+9. Remove “Our Proud Achievers”
+
+Completely remove the entire “Our Proud Achievers” section.
+
+10. Rename Facilities Section
+
+Change:
+
+World Class Facilities
+
+To:
+
+Top Class Facilities
+
+Keep styling same.
+
+11. Improve Infrastructure Layout
+
+Redesign the infrastructure/facilities section into a cleaner and more professional layout.
+
+Arrange properly in grid format:
+
+Smart Classrooms
+Science Labs
+Computer Lab
+Library
+Hostel Facility
+Sports Ground
+Transportation
+
+Add better spacing, alignment, and card design.
+
+12. Add About Infinity Public School Section
+
+Create a dedicated “About Infinity Public School” section on homepage.
+
+Include:
+
+School vision
+Mission
+Academic excellence
+Discipline
+Competitive preparation
+Holistic development
+
+Use professional and trust-building content.
+
+13. Add Leadership Messages Section
+
+Create a premium section for:
+
+Message from Director
+Message from Managing Director
+Message from Principal
+
+Each should include:
+
+Photo placeholder
+Name
+Designation
+Message content
+
+Use card layout.
+
+14. Update About Page Timeline
+
+In About Page → Milestones of Excellence section:
+
+Update journey timeline starting from:
+
+2023 – Establishment of Infinity Public School
+
+Remove any old or incorrect years.
+
+Example timeline:
+
+2023 – School Established
+2024 – Expanded to Higher Classes
+2025 – Added Competitive Preparation Wing
+2026 – 450+ Students Enrolled
+15. Remove Result Section/Page
+
+Completely remove:
+
+Results page
+Results section
+Result links from navbar
+Result cards
+Result references
+
+Remove all routing and menu items related to Results.
+
+Final Instruction:
+
+Maintain:
+
+Same color palette (#063d65 and #fe8400)
+Same premium look
+Same responsive design
+Same animations
+Same professional educational theme
+
+Do not break existing functionality.
+Keep the website admission-focused, parent-friendly, trust-building, and visually premium.

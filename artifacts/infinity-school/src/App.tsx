@@ -11,7 +11,6 @@ import FAQ from "@/pages/faq";
 import Admission from "@/pages/admission";
 import About from "@/pages/about";
 import Faculty from "@/pages/faculty";
-import Results from "@/pages/results";
 import Gallery from "@/pages/gallery";
 import Hostel from "@/pages/hostel";
 import Blog from "@/pages/blog";
@@ -25,7 +24,6 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/faculty" component={Faculty} />
-        <Route path="/results" component={Results} />
         <Route path="/gallery" component={Gallery} />
         <Route path="/hostel" component={Hostel} />
         <Route path="/admission" component={Admission} />

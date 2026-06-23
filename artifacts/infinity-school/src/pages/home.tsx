@@ -12,6 +12,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import heroBg from "@/assets/hero.png";
+import staffAfshan from "@/assets/staff-afshan-parveen.jpeg";
+import staffNishi from "@/assets/staff-nishi-parveen.jpeg";
+import staffAnamika from "@/assets/staff-anamika.jpeg";
+import staffHira from "@/assets/staff-hira.jpeg";
 import facility1 from "@/assets/facility-1.png";
 import facility2 from "@/assets/facility-2.png";
 import facility3 from "@/assets/facility-3.png";
@@ -410,19 +414,27 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
             {[
-              { name: "Ms. Afshan Parveen", role: "Teacher" },
-              { name: "Ms. Nishi Parveen", role: "Teacher" },
-              { name: "Mrs. Anamika", role: "Teacher" },
-              { name: "Ms. Baby Sana", role: "Teacher" },
-              { name: "Ms. Arshiya Kamil", role: "Teacher" },
-              { name: "Ms. Hira", role: "Teacher" },
+              { name: "Ms. Afshan Parveen", role: "Teacher", img: staffAfshan },
+              { name: "Ms. Nishi Parveen", role: "Teacher", img: staffNishi },
+              { name: "Mrs. Anamika", role: "Teacher", img: staffAnamika },
+              { name: "Ms. Baby Sana", role: "Teacher", img: null },
+              { name: "Ms. Arshiya Kamil", role: "Teacher", img: null },
+              { name: "Ms. Hira", role: "Teacher", img: staffHira },
             ].map((fac, i) => (
-              <div key={i} className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow group text-center border border-border hover:border-primary/20">
-                <div className="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <Users size={28} className="text-primary/50" />
+              <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group border border-border hover:border-primary/20">
+                <div className="aspect-[3/4] overflow-hidden bg-muted">
+                  {fac.img ? (
+                    <img src={fac.img} alt={fac.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-primary/5">
+                      <Users size={40} className="text-primary/20" />
+                    </div>
+                  )}
                 </div>
-                <h4 className="font-bold text-sm text-primary mb-1 leading-tight">{fac.name}</h4>
-                <span className="text-xs font-semibold bg-secondary/10 text-secondary px-2 py-0.5 rounded-full">{fac.role}</span>
+                <div className="p-3 text-center">
+                  <h4 className="font-bold text-xs text-primary mb-1 leading-tight">{fac.name}</h4>
+                  <span className="text-xs font-semibold bg-secondary/10 text-secondary px-2 py-0.5 rounded-full">{fac.role}</span>
+                </div>
               </div>
             ))}
           </div>

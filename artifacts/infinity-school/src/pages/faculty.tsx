@@ -1,45 +1,72 @@
 import { Users, Star } from "lucide-react";
 
+import imgMMZafar from "@/assets/staff-mm-zafar.jpeg";
+import imgTayyab from "@/assets/staff-tayyab.jpeg";
+import imgDanishKhan from "@/assets/staff-danish-khan.jpeg";
+import imgShabeenaMirza from "@/assets/staff-shabeena-mirza.jpeg";
+import imgTaniyaSiraj from "@/assets/staff-taniya-siraj.jpeg";
+import imgAlmeenSiddiqui from "@/assets/staff-almeen-siddiqui.jpeg";
+import imgAfshan from "@/assets/staff-afshan-parveen.jpeg";
+import imgNishi from "@/assets/staff-nishi-parveen.jpeg";
+import imgAnamika from "@/assets/staff-anamika.jpeg";
+import imgHira from "@/assets/staff-hira.jpeg";
+import imgAisha from "@/assets/staff-aisha.jpeg";
+import imgVandana from "@/assets/staff-vandana.jpeg";
+import imgPooja from "@/assets/staff-pooja-rani.jpeg";
+
 type StaffMember = {
   name: string;
   role: string;
+  img?: string;
 };
 
 const administration: StaffMember[] = [
-  { name: "Mr. M.M. Zafar", role: "Admin" },
-  { name: "Mr. Mohd Tayyab", role: "Coordinator" },
-  { name: "Mr. Mohd. Danish Khan", role: "Urdu Department Incharge" },
-  { name: "Ms. Shabeena Mirza", role: "Academic Incharge (Juniors)" },
-  { name: "Mrs. Taniya Siraj", role: "CCA Incharge" },
-  { name: "Mr. Almeen Siddiqui", role: "Sports Incharge" },
+  { name: "Mr. M.M. Zafar", role: "Admin", img: imgMMZafar },
+  { name: "Mr. Mohd Tayyab", role: "Coordinator", img: imgTayyab },
+  { name: "Mr. Mohd. Danish Khan", role: "Urdu Department Incharge", img: imgDanishKhan },
+  { name: "Ms. Shabeena Mirza", role: "Academic Incharge (Juniors)", img: imgShabeenaMirza },
+  { name: "Mrs. Taniya Siraj", role: "CCA Incharge", img: imgTaniyaSiraj },
+  { name: "Mr. Almeen Siddiqui", role: "Sports Incharge", img: imgAlmeenSiddiqui },
 ];
 
 const teachers: StaffMember[] = [
-  { name: "Ms. Afshan Parveen", role: "Teacher" },
-  { name: "Ms. Nishi Parveen", role: "Teacher" },
-  { name: "Mrs. Anamika", role: "Teacher" },
+  { name: "Ms. Afshan Parveen", role: "Teacher", img: imgAfshan },
+  { name: "Ms. Nishi Parveen", role: "Teacher", img: imgNishi },
+  { name: "Mrs. Anamika", role: "Teacher", img: imgAnamika },
   { name: "Ms. Baby Sana", role: "Teacher" },
   { name: "Ms. Arshiya Kamil", role: "Teacher" },
-  { name: "Ms. Hira", role: "Teacher" },
+  { name: "Ms. Hira", role: "Teacher", img: imgHira },
 ];
 
 const assistantTeachers: StaffMember[] = [
   { name: "Mrs. Rubi Zafar", role: "Assistant Teacher" },
-  { name: "Ms. Aisha Khatoon", role: "Assistant Teacher" },
-  { name: "Ms. Vandana", role: "Assistant Teacher" },
+  { name: "Ms. Aisha Khatoon", role: "Assistant Teacher", img: imgAisha },
+  { name: "Ms. Vandana", role: "Assistant Teacher", img: imgVandana },
   { name: "Ms. Hasan Zehra", role: "Assistant Teacher" },
 ];
 
 function StaffCard({ member, accent = false }: { member: StaffMember; accent?: boolean }) {
   return (
-    <div className={`bg-white rounded-2xl border p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md hover:border-primary/20 transition-all group ${accent ? "border-secondary/30" : "border-border"}`}>
-      <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${accent ? "bg-secondary/10" : "bg-primary/5"} group-hover:scale-110 transition-transform`}>
-        <Users size={28} className={accent ? "text-secondary" : "text-primary/50"} />
+    <div className={`bg-white rounded-2xl border overflow-hidden shadow-sm hover:shadow-md hover:border-primary/20 transition-all group ${accent ? "border-secondary/30" : "border-border"}`}>
+      <div className="aspect-[3/4] overflow-hidden bg-muted">
+        {member.img ? (
+          <img
+            src={member.img}
+            alt={member.name}
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <div className={`w-full h-full flex items-center justify-center ${accent ? "bg-secondary/10" : "bg-primary/5"}`}>
+            <Users size={48} className={accent ? "text-secondary/40" : "text-primary/20"} />
+          </div>
+        )}
       </div>
-      <h4 className="font-bold text-primary text-base mb-1 leading-tight">{member.name}</h4>
-      <span className={`text-xs font-semibold px-3 py-1 rounded-full ${accent ? "bg-secondary/10 text-secondary" : "bg-primary/5 text-primary/70"}`}>
-        {member.role}
-      </span>
+      <div className="p-4 text-center">
+        <h4 className="font-bold text-primary text-sm mb-1 leading-tight">{member.name}</h4>
+        <span className={`text-xs font-semibold px-3 py-1 rounded-full ${accent ? "bg-secondary/10 text-secondary" : "bg-primary/5 text-primary/70"}`}>
+          {member.role}
+        </span>
+      </div>
     </div>
   );
 }
@@ -81,13 +108,19 @@ export default function Faculty() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {[
-                { name: "Dr. Nisar Ahmad Nadvi", role: "Director" },
-                { name: "Dr. Arshi Ahmad", role: "Managing Director" },
-                { name: "Mrs. Pooja Rani", role: "Principal" },
+                { name: "Dr. Nisar Ahmad Nadvi", role: "Director", img: null },
+                { name: "Dr. Arshi Ahmad", role: "Managing Director", img: null },
+                { name: "Mrs. Pooja Rani", role: "Principal", img: imgPooja },
               ].map((leader, i) => (
                 <div key={i} className="flex flex-col items-center text-center p-6 bg-white/10 rounded-2xl border border-white/20 hover:bg-white/15 transition-colors">
-                  <div className="w-20 h-20 rounded-full bg-white/15 border-4 border-secondary/60 flex items-center justify-center mb-4">
-                    <Users size={36} className="text-white/70" />
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-secondary/60 mb-4">
+                    {leader.img ? (
+                      <img src={leader.img} alt={leader.name} className="w-full h-full object-cover object-top" />
+                    ) : (
+                      <div className="w-full h-full bg-white/15 flex items-center justify-center">
+                        <Users size={36} className="text-white/70" />
+                      </div>
+                    )}
                   </div>
                   <h4 className="font-bold text-white text-lg mb-1">{leader.name}</h4>
                   <span className="text-xs font-bold bg-secondary text-white px-3 py-1 rounded-full">{leader.role}</span>

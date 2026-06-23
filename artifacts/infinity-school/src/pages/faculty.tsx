@@ -112,18 +112,20 @@ export default function Faculty() {
                 { name: "Dr. Arshi Ahmad", role: "Managing Director", img: null },
                 { name: "Mrs. Pooja Rani", role: "Principal", img: imgPooja },
               ].map((leader, i) => (
-                <div key={i} className="flex flex-col items-center text-center p-6 bg-white/10 rounded-2xl border border-white/20 hover:bg-white/15 transition-colors">
-                  <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-secondary/60 mb-4">
+                <div key={i} className="bg-white/10 rounded-2xl border border-white/20 hover:bg-white/15 transition-colors overflow-hidden">
+                  <div className="relative aspect-[3/4] overflow-hidden">
                     {leader.img ? (
-                      <img src={leader.img} alt={leader.name} className="w-full h-full object-cover object-top" />
+                      <img src={leader.img} alt={leader.name} className="w-full h-full object-cover object-center" />
                     ) : (
                       <div className="w-full h-full bg-white/15 flex items-center justify-center">
-                        <Users size={36} className="text-white/70" />
+                        <Users size={56} className="text-white/40" />
                       </div>
                     )}
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/90 to-transparent pt-10 pb-4 px-4 text-center">
+                      <h4 className="font-bold text-white text-base mb-1">{leader.name}</h4>
+                      <span className="text-xs font-bold bg-secondary text-white px-3 py-1 rounded-full">{leader.role}</span>
+                    </div>
                   </div>
-                  <h4 className="font-bold text-white text-lg mb-1">{leader.name}</h4>
-                  <span className="text-xs font-bold bg-secondary text-white px-3 py-1 rounded-full">{leader.role}</span>
                 </div>
               ))}
             </div>

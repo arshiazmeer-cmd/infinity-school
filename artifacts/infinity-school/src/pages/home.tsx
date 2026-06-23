@@ -12,6 +12,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import heroBg from "@/assets/hero.png";
+import imgPooja from "@/assets/staff-pooja-rani.jpeg";
 import staffAfshan from "@/assets/staff-afshan-parveen.jpeg";
 import staffNishi from "@/assets/staff-nishi-parveen.jpeg";
 import staffAnamika from "@/assets/staff-anamika.jpeg";
@@ -380,12 +381,28 @@ export default function HomePage() {
                 transition={{ delay: i * 0.15 }}
                 className="bg-muted rounded-3xl overflow-hidden border border-border shadow-sm hover:shadow-lg transition-shadow"
               >
-                <div className="bg-primary p-8 flex flex-col items-center text-center">
-                  <div className="w-24 h-24 rounded-full bg-white/15 border-4 border-secondary/50 flex items-center justify-center mb-4">
-                    <Users size={40} className="text-white/70" />
-                  </div>
-                  <h4 className="text-xl font-bold text-white">{leader.name}</h4>
-                  <p className="text-secondary font-semibold text-sm mt-1">{leader.designation}</p>
+                <div className="bg-primary relative flex flex-col items-center text-center overflow-hidden min-h-[220px]">
+                  {leader.designation === "Principal" ? (
+                    <>
+                      <img
+                        src={imgPooja}
+                        alt={leader.name}
+                        className="absolute inset-0 w-full h-full object-cover object-center"
+                      />
+                      <div className="relative z-10 w-full mt-auto bg-gradient-to-t from-primary via-primary/80 to-transparent pt-12 pb-6 px-4">
+                        <h4 className="text-xl font-bold text-white">{leader.name}</h4>
+                        <p className="text-secondary font-semibold text-sm mt-1">{leader.designation}</p>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="p-8 flex flex-col items-center w-full">
+                      <div className="w-24 h-24 rounded-full bg-white/15 border-4 border-secondary/50 flex items-center justify-center mb-4">
+                        <Users size={40} className="text-white/70" />
+                      </div>
+                      <h4 className="text-xl font-bold text-white">{leader.name}</h4>
+                      <p className="text-secondary font-semibold text-sm mt-1">{leader.designation}</p>
+                    </div>
+                  )}
                 </div>
                 <div className="p-8">
                   <div className="text-secondary text-4xl font-serif leading-none mb-2">"</div>

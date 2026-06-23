@@ -3,27 +3,32 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ZoomIn } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-import facility1 from "@/assets/facility-1.png";
-import facility2 from "@/assets/facility-2.png";
-import facility3 from "@/assets/facility-3.png";
-import heroImg from "@/assets/hero.png";
+import infraClassroom from "@/assets/infra-classroom.jpeg";
+import infraClassroom1 from "@/assets/infra-classroom-1.jpeg";
+import infraClassroom2 from "@/assets/infra-classroom-2.jpeg";
+import infraClassroom3 from "@/assets/infra-classroom-3.jpeg";
+import infraHostel1 from "@/assets/infra-hostel-1.jpeg";
+import infraHostel2 from "@/assets/infra-hostel-2.jpeg";
+import infraLibrary from "@/assets/infra-library.jpeg";
+import infraTransport from "@/assets/infra-transport.jpeg";
 
-// Placeholder logic for more images
 const galleryImages = [
-  { id: 1, src: facility1, category: "classrooms", alt: "Smart Classroom" },
-  { id: 2, src: facility2, category: "labs", alt: "Science Laboratory" },
-  { id: 3, src: facility3, category: "hostel", alt: "Hostel Room" },
-  { id: 4, src: heroImg, category: "events", alt: "Classroom Session" },
-  { id: 5, src: facility1, category: "classrooms", alt: "Smart Classroom 2" },
-  { id: 6, src: facility2, category: "labs", alt: "Physics Lab" },
+  { id: 1, src: infraClassroom1, category: "classrooms", alt: "Nursery Classroom" },
+  { id: 2, src: infraClassroom2, category: "classrooms", alt: "Activity Classroom" },
+  { id: 3, src: infraClassroom, category: "classrooms", alt: "Primary Classroom" },
+  { id: 4, src: infraClassroom3, category: "classrooms", alt: "Senior Classroom" },
+  { id: 5, src: infraHostel1, category: "hostel", alt: "Hostel Room 1" },
+  { id: 6, src: infraHostel2, category: "hostel", alt: "Hostel Room 2" },
+  { id: 7, src: infraLibrary, category: "campus", alt: "Library" },
+  { id: 8, src: infraTransport, category: "campus", alt: "School Bus" },
 ];
 
 export default function Gallery() {
   const [activeTab, setActiveTab] = useState("all");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const filteredImages = activeTab === "all" 
-    ? galleryImages 
+  const filteredImages = activeTab === "all"
+    ? galleryImages
     : galleryImages.filter(img => img.category === activeTab);
 
   return (
@@ -42,16 +47,15 @@ export default function Gallery() {
               <TabsList className="bg-white border border-border p-1 h-auto flex-wrap">
                 <TabsTrigger value="all" className="px-6 py-2">All</TabsTrigger>
                 <TabsTrigger value="classrooms" className="px-6 py-2">Classrooms</TabsTrigger>
-                <TabsTrigger value="labs" className="px-6 py-2">Laboratories</TabsTrigger>
                 <TabsTrigger value="hostel" className="px-6 py-2">Hostel</TabsTrigger>
-                <TabsTrigger value="events" className="px-6 py-2">Events & Sports</TabsTrigger>
+                <TabsTrigger value="campus" className="px-6 py-2">Campus</TabsTrigger>
               </TabsList>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {filteredImages.map((img) => (
-                <div 
-                  key={img.id} 
+                <div
+                  key={img.id}
                   className="relative group rounded-xl overflow-hidden aspect-[4/3] bg-gray-200 cursor-pointer border border-border shadow-sm hover:shadow-xl transition-shadow"
                   onClick={() => setSelectedImage(img.src)}
                 >
@@ -59,10 +63,13 @@ export default function Gallery() {
                   <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <ZoomIn className="text-white" size={48} />
                   </div>
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <p className="text-white text-sm font-semibold">{img.alt}</p>
+                  </div>
                 </div>
               ))}
             </div>
-            
+
             {filteredImages.length === 0 && (
               <div className="text-center py-20 text-muted-foreground">
                 No images found for this category yet.

@@ -17,9 +17,9 @@ import staffAfshan from "@/assets/staff-afshan-parveen.jpeg";
 import staffNishi from "@/assets/staff-nishi-parveen.jpeg";
 import staffAnamika from "@/assets/staff-anamika.jpeg";
 import staffHira from "@/assets/staff-hira.jpeg";
-import facility1 from "@/assets/facility-1.png";
-import facility2 from "@/assets/facility-2.png";
-import facility3 from "@/assets/facility-3.png";
+import infraClassroom1 from "@/assets/infra-classroom-1.jpeg";
+import infraLibrary from "@/assets/infra-library.jpeg";
+import infraHostel1 from "@/assets/infra-hostel-1.jpeg";
 
 export default function HomePage() {
   const faqs = [
@@ -470,9 +470,9 @@ export default function HomePage() {
           {/* Feature image strip */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {[
-              { img: facility1, label: "Smart Classrooms" },
-              { img: facility2, label: "Advanced Science Labs" },
-              { img: facility3, label: "Premium Hostel Facility" },
+              { img: infraClassroom1, label: "Smart Classrooms" },
+              { img: infraLibrary, label: "Library & Study Hall" },
+              { img: infraHostel1, label: "Premium Hostel Facility" },
             ].map((item, i) => (
               <div key={i} className="group relative rounded-2xl overflow-hidden aspect-video shadow-md">
                 <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />

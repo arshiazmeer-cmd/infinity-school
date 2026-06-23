@@ -1,5 +1,6 @@
 import { CheckCircle2, Shield, Utensils, Wifi, Book } from "lucide-react";
-import facility3 from "@/assets/facility-3.png";
+import infraHostel1 from "@/assets/infra-hostel-1.jpeg";
+import infraHostel2 from "@/assets/infra-hostel-2.jpeg";
 
 export default function Hostel() {
   return (
@@ -34,8 +35,13 @@ export default function Hostel() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-              <img src={facility3} alt="Modern Hostel Room" className="w-full h-auto object-cover" />
+            <div className="grid grid-cols-1 gap-4">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <img src={infraHostel1} alt="Hostel Room" className="w-full h-auto object-cover" />
+              </div>
+              <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+                <img src={infraHostel2} alt="Hostel Common Area" className="w-full h-auto object-cover" />
+              </div>
             </div>
           </div>
 

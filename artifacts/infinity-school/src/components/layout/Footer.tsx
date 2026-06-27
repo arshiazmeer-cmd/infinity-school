@@ -1,7 +1,6 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Download } from "lucide-react";
 import logoImg from "@/assets/logo.png";
-import logo2Img from "@/assets/logo2.png";
 
 export function Footer() {
   return (
@@ -11,8 +10,11 @@ export function Footer() {
         {/* Brand Column */}
         <div className="space-y-6">
           <Link href="/" className="flex items-center gap-3">
-            <img src={logoImg} alt="IPS Shield Logo" className="h-16 w-auto object-contain" />
-            <img src={logo2Img} alt="Infinity Public School" className="h-12 w-auto object-contain brightness-0 invert" />
+            <img src={logoImg} alt="IPS Shield Logo" className="h-20 w-auto object-contain" />
+            <div className="flex flex-col leading-tight">
+              <span className="text-white font-bold text-lg tracking-wide">INFINITY PUBLIC SCHOOL</span>
+              <span className="text-secondary text-xs font-semibold tracking-widest">KURSI, BARABANKI</span>
+            </div>
           </Link>
           <p className="text-gray-300 text-sm leading-relaxed">
             A premier integrated school combining academic excellence with IIT-JEE and NEET preparation under one roof in Kursi, Barabanki.

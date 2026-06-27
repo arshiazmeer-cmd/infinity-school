@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoImg from "@/assets/logo.png";
-import logo2Img from "@/assets/logo2.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,8 +56,11 @@ export function Navbar() {
       <div className={`px-6 py-3 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-white"}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
-            <img src={logoImg} alt="IPS Shield Logo" className="h-16 w-auto object-contain" />
-            <img src={logo2Img} alt="Infinity Public School" className="h-12 w-auto object-contain" />
+            <img src={logoImg} alt="IPS Shield Logo" className="h-20 w-auto object-contain" />
+            <div className="flex flex-col leading-tight">
+              <span className="text-primary font-bold text-lg tracking-wide">INFINITY PUBLIC SCHOOL</span>
+              <span className="text-secondary text-xs font-semibold tracking-widest">KURSI, BARABANKI</span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -94,8 +96,11 @@ export function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-border flex flex-col p-4 animate-in slide-in-from-top-2">
           <div className="flex items-center gap-3 p-4 mb-2">
-            <img src={logoImg} alt="IPS Shield Logo" className="h-12 w-auto object-contain" />
-            <img src={logo2Img} alt="Infinity Public School" className="h-9 w-auto object-contain" />
+            <img src={logoImg} alt="IPS Shield Logo" className="h-14 w-auto object-contain" />
+            <div className="flex flex-col leading-tight">
+              <span className="text-primary font-bold text-base tracking-wide">INFINITY PUBLIC SCHOOL</span>
+              <span className="text-secondary text-xs font-semibold tracking-widest">KURSI, BARABANKI</span>
+            </div>
           </div>
           {navLinks.map((link) => (
             <Link

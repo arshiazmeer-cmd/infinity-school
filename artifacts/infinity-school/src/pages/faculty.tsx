@@ -3,14 +3,14 @@ import { Users, Star } from "lucide-react";
 import imgMMZafar from "@/assets/staff-mm-zafar.jpeg";
 import imgTayyab from "@/assets/staff-tayyab.jpeg";
 import imgDanishKhan from "@/assets/staff-danish-khan.jpeg";
-import imgShabeenaMirza from "@/assets/staff-shabeena-mirza.jpeg";
-import imgTaniyaSiraj from "@/assets/staff-taniya-siraj.jpeg";
+import imgShabeenaMirza from "@/assets/staff-shabeena.jpeg";
+import imgTaniyaSiraj from "@/assets/staff-taniya.jpeg";
 import imgAlmeenSiddiqui from "@/assets/staff-almeen-siddiqui.jpeg";
 import imgAfshan from "@/assets/staff-afshan-parveen.jpeg";
 import imgNishi from "@/assets/staff-nishi-parveen.jpeg";
 import imgAnamika from "@/assets/staff-anamika.jpeg";
 import imgHira from "@/assets/staff-hira.jpeg";
-import imgAisha from "@/assets/staff-aisha.jpeg";
+import imgAisha from "@/assets/staff-aysha.jpeg";
 import imgVandana from "@/assets/staff-vandana.jpeg";
 import imgPooja from "@/assets/staff-pooja-rani.jpeg";
 

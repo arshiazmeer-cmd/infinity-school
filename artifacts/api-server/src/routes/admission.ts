@@ -1,9 +1,56 @@
 import { Router } from "express";
 import { db, admissionsTable } from "@workspace/db";
 import nodemailer from "nodemailer";
-import { randomUUID } from "crypto";
 
 const router = Router();
+
+async function sendWhatsAppNotification(data: {
+  admissionId: string;
+  studentName: string;
+  applyingForClass: string;
+  dateOfBirth: string;
+  fatherName: string;
+  motherName: string;
+  parentMobile: string;
+  parentEmail: string;
+  address: string;
+  city: string;
+  state: string;
+  pinCode: string;
+  transportRequired: boolean;
+  hostelRequired: boolean;
+  previousSchoolName: string;
+  medicalCondition?: string;
+}): Promise<void> {
+  const apiKey = process.env.CALLMEBOT_API_KEY;
+  if (!apiKey) return; // not configured yet
+
+  const submittedOn = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+
+  const message =
+    `🎓 NEW ADMISSION ENQUIRY\n\n` +
+    `🆔 ID: ${data.admissionId}\n` +
+    `👦 Student: ${data.studentName}\n` +
+    `🏫 Class: ${data.applyingForClass}\n` +
+    `🎂 DOB: ${data.dateOfBirth}\n` +
+    `👨 Father: ${data.fatherName}\n` +
+    `👩 Mother: ${data.motherName}\n` +
+    `📱 Mobile: ${data.parentMobile}\n` +
+    `📧 Email: ${data.parentEmail}\n` +
+    `🏠 Address: ${data.address}, ${data.city}, ${data.state} - ${data.pinCode}\n` +
+    `🚌 Transport: ${data.transportRequired ? "Yes" : "No"}\n` +
+    `🏠 Hostel: ${data.hostelRequired ? "Yes" : "No"}\n` +
+    `🏫 Prev School: ${data.previousSchoolName}\n` +
+    `📝 Medical: ${data.medicalCondition || "None"}\n` +
+    `📅 Submitted: ${submittedOn}`;
+
+  const url = `https://api.callmebot.com/whatsapp.php?phone=919696788406&text=${encodeURIComponent(message)}&apikey=${apiKey}`;
+
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`CallMeBot responded with status ${res.status}`);
+  }
+}
 
 function generateAdmissionId(): string {
   const year = new Date().getFullYear();
@@ -205,6 +252,28 @@ router.post("/admissions", async (req, res) => {
       transportRequired: Boolean(body.transportRequired),
       hostelRequired: Boolean(body.hostelRequired),
       medicalCondition: body.medicalCondition?.trim() || null,
+    });
+
+    // Fire-and-forget WhatsApp — don't fail the response if it fails
+    sendWhatsAppNotification({
+      admissionId,
+      studentName: body.studentName,
+      applyingForClass: body.applyingForClass,
+      dateOfBirth: body.dateOfBirth,
+      fatherName: body.fatherName,
+      motherName: body.motherName,
+      parentMobile: body.parentMobile,
+      parentEmail: body.parentEmail,
+      address: body.address,
+      city: body.city,
+      state: body.state,
+      pinCode: body.pinCode,
+      transportRequired: Boolean(body.transportRequired),
+      hostelRequired: Boolean(body.hostelRequired),
+      previousSchoolName: body.previousSchoolName,
+      medicalCondition: body.medicalCondition,
+    }).catch(() => {
+      // WhatsApp failure is non-fatal
     });
 
     // Fire-and-forget email — don't fail the response if email fails

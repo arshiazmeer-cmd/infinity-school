@@ -44,7 +44,7 @@ async function sendWhatsAppNotification(data: {
     `📝 Medical: ${data.medicalCondition || "None"}\n` +
     `📅 Submitted: ${submittedOn}`;
 
-  const url = `https://api.callmebot.com/whatsapp.php?phone=919696788406&text=${encodeURIComponent(message)}&apikey=${apiKey}`;
+  const url = `https://api.callmebot.com/whatsapp.php?phone=919151115234&text=${encodeURIComponent(message)}&apikey=${apiKey}`;
 
   const res = await fetch(url);
   if (!res.ok) {

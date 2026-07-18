@@ -5,18 +5,7 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
-
-export type AdmissionFormInputGender = typeof AdmissionFormInputGender[keyof typeof AdmissionFormInputGender];
-
-
-export const AdmissionFormInputGender = {
-  Male: 'Male',
-  Female: 'Female',
-  Other: 'Other',
-} as const;
+import type { AdmissionFormInputGender } from './admissionFormInputGender';
 
 export interface AdmissionFormInput {
   studentName: string;
@@ -40,14 +29,3 @@ export interface AdmissionFormInput {
   hostelRequired: boolean;
   medicalCondition?: string;
 }
-
-export interface AdmissionResponse {
-  admissionId: string;
-  message: string;
-}
-
-export interface ErrorResponse {
-  error: string;
-  details?: string;
-}
-

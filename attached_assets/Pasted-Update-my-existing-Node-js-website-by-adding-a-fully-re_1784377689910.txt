@@ -1,0 +1,75 @@
+Update my existing Node.js website by adding a fully responsive and modern "Online Admission Form" section without changing the current website design or layout.
+
+Requirements:
+
+1. Create a new "Apply for Admission" section with a premium UI matching the existing website.
+
+2. The Admission Form should collect the following mandatory details:
+
+STUDENT DETAILS
+- Student Full Name
+- Gender
+- Date of Birth
+- Aadhaar Number (Optional)
+- Blood Group (Optional)
+- Applying For Class
+- Previous School Name
+- Previous Class
+- Student Photograph Upload (Optional)
+
+PARENT DETAILS
+- Father's Name
+- Mother's Name
+- Parent Mobile Number
+- Alternate Mobile Number (Optional)
+- Parent Email Address
+- Complete Residential Address
+- City
+- State
+- PIN Code
+
+OTHER DETAILS
+- Transport Required (Yes/No)
+- Hostel Required (Yes/No)
+- Special Medical Condition (Optional)
+
+3. Add proper validation for all required fields.
+
+4. After successful submission:
+   - Save the complete admission data into the database (SQLite or MongoDB).
+   - Send all submitted details instantly to my WhatsApp number:
+     +91 9118502112 (Replace with my WhatsApp number)
+
+WhatsApp message format:
+
+🎓 NEW ADMISSION ENQUIRY
+
+👦 Student Name:
+🏫 Applying Class:
+🎂 DOB:
+👨 Father:
+👩 Mother:
+📱 Mobile:
+📧 Email:
+🏠 Address:
+🚌 Transport:
+🏠 Hostel:
+🏫 Previous School:
+📝 Medical Condition:
+📅 Submitted On:
+🌐 Website URL:
+
+5. If direct WhatsApp messaging is not possible, integrate WhatsApp Business Cloud API or Twilio WhatsApp API and provide complete setup instructions.
+
+6. Also send the admission details to my email as a backup. (Email: ipskursi@gmail.com)
+
+7. Generate a unique Admission ID for every submission.
+
+8. Show a beautiful success page after submission with:
+   "Thank you for applying! Your admission enquiry has been received successfully. Our admission team will contact you shortly."
+
+9. Add spam protection, server-side validation, error logging, and secure file upload handling.
+
+10. Make the form mobile-friendly, fast, and production-ready.
+
+11. Keep the existing website unchanged except for adding this new Admission Form section. Provide complete backend and frontend code with all required environment variables and installation instructions.

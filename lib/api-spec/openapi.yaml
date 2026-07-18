@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: admission
+    description: Admission form operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /admissions:
+    post:
+      operationId: submitAdmission
+      tags: [admission]
+      summary: Submit admission form
+      description: Submit a new admission enquiry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AdmissionFormInput"
+      responses:
+        "201":
+          description: Admission submitted successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdmissionResponse"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +66,84 @@ components:
           type: string
       required:
         - status
-
+    AdmissionFormInput:
+      type: object
+      required:
+        - studentName
+        - gender
+        - dateOfBirth
+        - applyingForClass
+        - previousSchoolName
+        - previousClass
+        - fatherName
+        - motherName
+        - parentMobile
+        - parentEmail
+        - address
+        - city
+        - state
+        - pinCode
+        - transportRequired
+        - hostelRequired
+      properties:
+        studentName:
+          type: string
+        gender:
+          type: string
+          enum: [Male, Female, Other]
+        dateOfBirth:
+          type: string
+        aadhaarNumber:
+          type: string
+        bloodGroup:
+          type: string
+        applyingForClass:
+          type: string
+        previousSchoolName:
+          type: string
+        previousClass:
+          type: string
+        fatherName:
+          type: string
+        motherName:
+          type: string
+        parentMobile:
+          type: string
+        alternateMobile:
+          type: string
+        parentEmail:
+          type: string
+          format: email
+        address:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        pinCode:
+          type: string
+        transportRequired:
+          type: boolean
+        hostelRequired:
+          type: boolean
+        medicalCondition:
+          type: string
+    AdmissionResponse:
+      type: object
+      required:
+        - admissionId
+        - message
+      properties:
+        admissionId:
+          type: string
+        message:
+          type: string
+    ErrorResponse:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: string
+        details:
+          type: string

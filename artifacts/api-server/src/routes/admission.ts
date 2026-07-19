@@ -22,33 +22,49 @@ async function sendWhatsAppNotification(data: {
   previousSchoolName: string;
   medicalCondition?: string;
 }): Promise<void> {
-  const apiKey = process.env.CALLMEBOT_API_KEY;
-  if (!apiKey) return; // not configured yet
+  const accessToken = process.env.WHATSAPP_ACCESS_TOKEN;
+  const phoneNumberId = process.env.WHATSAPP_PHONE_NUMBER_ID;
+
+  if (!accessToken || !phoneNumberId) return; // not configured yet
 
   const submittedOn = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
 
   const message =
-    `🎓 NEW ADMISSION ENQUIRY\n\n` +
-    `🆔 ID: ${data.admissionId}\n` +
-    `👦 Student: ${data.studentName}\n` +
-    `🏫 Class: ${data.applyingForClass}\n` +
-    `🎂 DOB: ${data.dateOfBirth}\n` +
-    `👨 Father: ${data.fatherName}\n` +
-    `👩 Mother: ${data.motherName}\n` +
-    `📱 Mobile: ${data.parentMobile}\n` +
-    `📧 Email: ${data.parentEmail}\n` +
-    `🏠 Address: ${data.address}, ${data.city}, ${data.state} - ${data.pinCode}\n` +
-    `🚌 Transport: ${data.transportRequired ? "Yes" : "No"}\n` +
-    `🏠 Hostel: ${data.hostelRequired ? "Yes" : "No"}\n` +
-    `🏫 Prev School: ${data.previousSchoolName}\n` +
-    `📝 Medical: ${data.medicalCondition || "None"}\n` +
-    `📅 Submitted: ${submittedOn}`;
+    `🎓 *NEW ADMISSION ENQUIRY*\n\n` +
+    `🆔 *ID:* ${data.admissionId}\n` +
+    `👦 *Student:* ${data.studentName}\n` +
+    `🏫 *Class:* ${data.applyingForClass}\n` +
+    `🎂 *DOB:* ${data.dateOfBirth}\n` +
+    `👨 *Father:* ${data.fatherName}\n` +
+    `👩 *Mother:* ${data.motherName}\n` +
+    `📱 *Mobile:* ${data.parentMobile}\n` +
+    `📧 *Email:* ${data.parentEmail}\n` +
+    `🏠 *Address:* ${data.address}, ${data.city}, ${data.state} - ${data.pinCode}\n` +
+    `🚌 *Transport:* ${data.transportRequired ? "Yes" : "No"}\n` +
+    `🏨 *Hostel:* ${data.hostelRequired ? "Yes" : "No"}\n` +
+    `🏫 *Prev School:* ${data.previousSchoolName}\n` +
+    `📝 *Medical:* ${data.medicalCondition || "None"}\n` +
+    `📅 *Submitted:* ${submittedOn}`;
 
-  const url = `https://api.callmebot.com/whatsapp.php?phone=919151115234&text=${encodeURIComponent(message)}&apikey=${apiKey}`;
+  const url = `https://graph.facebook.com/v21.0/${phoneNumberId}/messages`;
 
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${accessToken}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      messaging_product: "whatsapp",
+      to: "919151115234",
+      type: "text",
+      text: { body: message },
+    }),
+  });
+
   if (!res.ok) {
-    throw new Error(`CallMeBot responded with status ${res.status}`);
+    const errBody = await res.text();
+    throw new Error(`Meta WhatsApp API error ${res.status}: ${errBody}`);
   }
 }
 

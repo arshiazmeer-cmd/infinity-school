@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, Mail, Download, GraduationCap } from "lucide-react";
+import { Menu, X, Phone, Mail, Download, GraduationCap, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoImg from "@/assets/logo.png";
 
@@ -85,6 +85,12 @@ export function Navbar() {
                 Teacher Login
               </Button>
             </Link>
+            <Link href="/admin/login">
+              <Button variant="outline" className="border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white font-semibold rounded-full px-5 text-sm flex items-center gap-1.5 transition-colors">
+                <Shield size={15} />
+                Admin
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -125,6 +131,12 @@ export function Navbar() {
             <Button variant="outline" className="w-full mt-2 border-primary text-primary hover:bg-primary hover:text-white flex items-center justify-center gap-2">
               <GraduationCap size={15} />
               Teacher Login
+            </Button>
+          </Link>
+          <Link href="/admin/login" onClick={() => setIsMobileMenuOpen(false)}>
+            <Button variant="outline" className="w-full mt-2 border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white flex items-center justify-center gap-2">
+              <Shield size={15} />
+              Admin Login
             </Button>
           </Link>
           <a

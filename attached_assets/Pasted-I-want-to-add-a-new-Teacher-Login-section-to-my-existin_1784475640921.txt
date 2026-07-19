@@ -1,0 +1,83 @@
+I want to add a new "Teacher Login" section to my existing school website.
+
+⚠️ IMPORTANT:
+- Do NOT modify, redesign, or break any existing pages or functionality.
+- Keep the current UI, colors, fonts, animations, and responsive design exactly as they are.
+- Reuse the existing design system and components.
+- Only add the new Teacher Login feature.
+
+Requirements:
+
+1. Create a secure Teacher Login page.
+   - Email/Username
+   - Password
+   - Show/Hide Password
+   - Remember Me
+   - Forgot Password (placeholder for now)
+   - Secure authentication
+   - Session management
+
+2. After successful login, redirect teachers to a professional dashboard.
+
+3. Create a left sidebar with the following menu items:
+
+🏠 Dashboard
+📖 Lesson Plan
+📝 Homework
+📚 Study Material
+📢 Notices
+👤 My Profile
+🔒 Logout
+
+4. Dashboard should display:
+   - Welcome message with Teacher's Name
+   - Current Date
+   - Quick summary cards:
+     • Lesson Plans
+     • Homework Assigned
+     • Study Materials Uploaded
+     • Latest Notices
+
+5. Lesson Plan Module:
+   - View Lesson Plans
+   - Add New Lesson Plan
+   - Edit Existing Lesson Plan
+   - Delete Lesson Plan
+
+6. Homework Module:
+   - Create Homework
+   - View Homework
+   - Edit Homework
+   - Delete Homework
+
+7. Study Material Module:
+   - Upload PDF, DOCX, PPT, Images
+   - View Uploaded Files
+   - Delete Files
+
+8. Notices Module:
+   - View notices uploaded by the school administration.
+   - Read-only for teachers.
+
+9. My Profile:
+   - Profile Photo
+   - Name
+   - Email
+   - Mobile Number
+   - Designation
+   - Change Password
+
+10. Logout:
+   - Securely end the session and redirect to the login page.
+
+Technical Requirements:
+- Analyze the existing project before making changes.
+- Integrate this feature into the current project structure.
+- Do not create duplicate layouts or components.
+- Follow the existing coding style.
+- Make the dashboard fully responsive for desktop, tablet, and mobile.
+- Use clean, modern UI matching the existing website.
+- Implement proper validation and error handling.
+- Keep the code modular and production-ready.
+
+Finally, provide a list of all files that were created or modified and explain each change.

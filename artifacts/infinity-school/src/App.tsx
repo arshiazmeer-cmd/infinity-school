@@ -15,9 +15,34 @@ import Gallery from "@/pages/gallery";
 import Hostel from "@/pages/hostel";
 import Blog from "@/pages/blog";
 
+// Teacher portal pages
+import TeacherLogin from "@/pages/teacher/login";
+import TeacherDashboard from "@/pages/teacher/dashboard";
+import LessonPlans from "@/pages/teacher/lesson-plans";
+import Homework from "@/pages/teacher/homework";
+import StudyMaterial from "@/pages/teacher/study-material";
+import Notices from "@/pages/teacher/notices";
+import Profile from "@/pages/teacher/profile";
+
 const queryClient = new QueryClient();
 
-function Router() {
+function TeacherRoutes() {
+  return (
+    <Switch>
+      <Route path="/teacher/login" component={TeacherLogin} />
+      <Route path="/teacher/dashboard" component={TeacherDashboard} />
+      <Route path="/teacher/lesson-plans" component={LessonPlans} />
+      <Route path="/teacher/homework" component={Homework} />
+      <Route path="/teacher/study-material" component={StudyMaterial} />
+      <Route path="/teacher/notices" component={Notices} />
+      <Route path="/teacher/profile" component={Profile} />
+      {/* Default redirect for /teacher */}
+      <Route path="/teacher" component={TeacherLogin} />
+    </Switch>
+  );
+}
+
+function PublicRoutes() {
   return (
     <Layout>
       <Switch>
@@ -33,6 +58,19 @@ function Router() {
         <Route component={NotFound} />
       </Switch>
     </Layout>
+  );
+}
+
+function Router() {
+  return (
+    <Switch>
+      {/* Teacher portal — has its own layout with sidebar, no school header/footer */}
+      <Route path="/teacher/:rest*" component={TeacherRoutes} />
+      <Route path="/teacher" component={TeacherRoutes} />
+
+      {/* Public school website */}
+      <Route component={PublicRoutes} />
+    </Switch>
   );
 }
 

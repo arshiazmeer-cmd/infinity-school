@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, Mail, Download } from "lucide-react";
+import { Menu, X, Phone, Mail, Download, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoImg from "@/assets/logo.png";
 
@@ -79,6 +79,12 @@ export function Navbar() {
                 Apply Now
               </Button>
             </Link>
+            <Link href="/teacher/login">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-semibold rounded-full px-5 text-sm flex items-center gap-1.5 transition-colors">
+                <GraduationCap size={15} />
+                Teacher Login
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -114,6 +120,12 @@ export function Navbar() {
           ))}
           <Link href="/admission" onClick={() => setIsMobileMenuOpen(false)}>
             <Button className="w-full mt-4 bg-secondary hover:bg-secondary/90 text-white">Apply Now</Button>
+          </Link>
+          <Link href="/teacher/login" onClick={() => setIsMobileMenuOpen(false)}>
+            <Button variant="outline" className="w-full mt-2 border-primary text-primary hover:bg-primary hover:text-white flex items-center justify-center gap-2">
+              <GraduationCap size={15} />
+              Teacher Login
+            </Button>
           </Link>
           <a
             href="/brochure.pdf"

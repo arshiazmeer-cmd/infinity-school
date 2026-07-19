@@ -24,6 +24,11 @@ import StudyMaterial from "@/pages/teacher/study-material";
 import Notices from "@/pages/teacher/notices";
 import Profile from "@/pages/teacher/profile";
 
+// Admin panel pages
+import AdminLogin from "@/pages/admin/login";
+import AdminDashboard from "@/pages/admin/dashboard";
+import AdminTeachers from "@/pages/admin/teachers";
+
 const queryClient = new QueryClient();
 
 function TeacherRoutes() {
@@ -36,8 +41,18 @@ function TeacherRoutes() {
       <Route path="/teacher/study-material" component={StudyMaterial} />
       <Route path="/teacher/notices" component={Notices} />
       <Route path="/teacher/profile" component={Profile} />
-      {/* Default redirect for /teacher */}
       <Route path="/teacher" component={TeacherLogin} />
+    </Switch>
+  );
+}
+
+function AdminRoutes() {
+  return (
+    <Switch>
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin/dashboard" component={AdminDashboard} />
+      <Route path="/admin/teachers" component={AdminTeachers} />
+      <Route path="/admin" component={AdminLogin} />
     </Switch>
   );
 }
@@ -64,7 +79,11 @@ function PublicRoutes() {
 function Router() {
   return (
     <Switch>
-      {/* Teacher portal — has its own layout with sidebar, no school header/footer */}
+      {/* Admin panel — own layout */}
+      <Route path="/admin/:rest*" component={AdminRoutes} />
+      <Route path="/admin" component={AdminRoutes} />
+
+      {/* Teacher portal — own layout with sidebar */}
       <Route path="/teacher/:rest*" component={TeacherRoutes} />
       <Route path="/teacher" component={TeacherRoutes} />
 

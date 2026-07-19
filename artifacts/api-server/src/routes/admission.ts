@@ -22,10 +22,10 @@ async function sendWhatsAppNotification(data: {
   previousSchoolName: string;
   medicalCondition?: string;
 }): Promise<void> {
-  const accessToken = process.env.WHATSAPP_ACCESS_TOKEN;
-  const phoneNumberId = process.env.WHATSAPP_PHONE_NUMBER_ID;
+  const instanceId = process.env.ULTRAMSG_INSTANCE_ID;
+  const token = process.env.ULTRAMSG_TOKEN;
 
-  if (!accessToken || !phoneNumberId) return; // not configured yet
+  if (!instanceId || !token) return; // not configured yet
 
   const submittedOn = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
 
@@ -46,25 +46,23 @@ async function sendWhatsAppNotification(data: {
     `📝 *Medical:* ${data.medicalCondition || "None"}\n` +
     `📅 *Submitted:* ${submittedOn}`;
 
-  const url = `https://graph.facebook.com/v21.0/${phoneNumberId}/messages`;
+  const params = new URLSearchParams({
+    token,
+    to: "919151115234",
+    body: message,
+  });
+
+  const url = `https://api.ultramsg.com/${instanceId}/messages/chat`;
 
   const res = await fetch(url, {
     method: "POST",
-    headers: {
-      "Authorization": `Bearer ${accessToken}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      messaging_product: "whatsapp",
-      to: "919151115234",
-      type: "text",
-      text: { body: message },
-    }),
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: params.toString(),
   });
 
   if (!res.ok) {
     const errBody = await res.text();
-    throw new Error(`Meta WhatsApp API error ${res.status}: ${errBody}`);
+    throw new Error(`UltraMsg API error ${res.status}: ${errBody}`);
   }
 }
 

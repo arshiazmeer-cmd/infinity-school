@@ -9,7 +9,6 @@ import imgAlmeenSiddiqui from "@/assets/staff-almeen-siddiqui.jpeg";
 import imgAfshan from "@/assets/staff-afshan-parveen.jpeg";
 import imgNishi from "@/assets/staff-nishi-parveen.jpeg";
 import imgAnamika from "@/assets/staff-anamika.jpeg";
-import imgHira from "@/assets/staff-hira.jpeg";
 import imgBabySana from "@/assets/staff-baby-sana.jpeg";
 import imgAisha from "@/assets/staff-aysha.jpeg";
 import imgVandana from "@/assets/staff-vandana.jpeg";
@@ -35,8 +34,6 @@ const teachers: StaffMember[] = [
   { name: "Ms. Nishi Parveen", role: "Teacher", img: imgNishi },
   { name: "Mrs. Anamika", role: "Teacher", img: imgAnamika },
   { name: "Ms. Baby Sana", role: "Teacher", img: imgBabySana },
-  { name: "Ms. Arshiya Kamil", role: "Teacher" },
-  { name: "Ms. Hira", role: "Teacher", img: imgHira },
 ];
 
 const assistantTeachers: StaffMember[] = [

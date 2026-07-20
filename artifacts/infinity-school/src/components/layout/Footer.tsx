@@ -9,11 +9,9 @@ export function Footer() {
 
         {/* Brand Column */}
         <div className="space-y-6">
-          <Link href="/" className="flex items-center gap-3">
-            <img src={logoImg} alt="IPS Shield Logo" className="h-20 w-auto object-contain" />
-            <div className="flex flex-col leading-tight">
-              <span className="text-white font-bold text-lg tracking-wide">INFINITY PUBLIC SCHOOL</span>
-              <span className="text-secondary text-xs font-semibold tracking-widest">KURSI, BARABANKI</span>
+          <Link href="/" className="flex items-center">
+            <div className="bg-white rounded-xl p-2 inline-block">
+              <img src={logoImg} alt="Infinity Public School Logo" className="h-14 w-auto object-contain" />
             </div>
           </Link>
           <p className="text-gray-300 text-sm leading-relaxed">
@@ -49,6 +47,7 @@ export function Footer() {
               { label: 'Photo Gallery', path: '/gallery' },
               { label: 'Hostel Facilities', path: '/hostel' },
               { label: 'Admission Process', path: '/admission' },
+              { label: 'Public Disclosure', path: '/disclosure' },
               { label: 'FAQs', path: '/faq' },
             ].map((item) => (
               <li key={item.path}>

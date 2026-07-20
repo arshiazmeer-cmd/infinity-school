@@ -16,7 +16,6 @@ import imgPooja from "@/assets/staff-pooja-rani.jpeg";
 import staffAfshan from "@/assets/staff-afshan-parveen.jpeg";
 import staffNishi from "@/assets/staff-nishi-parveen.jpeg";
 import staffAnamika from "@/assets/staff-anamika.jpeg";
-import staffHira from "@/assets/staff-hira.jpeg";
 import infraClassroom1 from "@/assets/infra-classroom-1.jpeg";
 import infraLibrary from "@/assets/infra-library.jpeg";
 import infraHostel1 from "@/assets/infra-hostel-1.jpeg";
@@ -91,12 +90,12 @@ export default function HomePage() {
   ];
 
   const courses = [
-    { level: "Nursery – Class 5", name: "Early Foundation", highlight: "Building curiosity, literacy, and numeracy from the ground up with a joyful learning environment.", accent: "bg-amber-500" },
+    { level: "Nursery – Class 5", name: "Early Foundation", highlight: "Building curiosity, literacy, and numeracy from the ground up with a joyful learning environment.", accent: "bg-secondary" },
     { level: "Classes 6–8", name: "Foundation Program", highlight: "Building strong fundamentals in Science & Maths for competitive readiness.", accent: "bg-secondary" },
     { level: "Classes 9–10", name: "Pre-Foundation", highlight: "Early preparation for NTSE, Olympiads, Boards & competitive entrance exams.", accent: "bg-secondary" },
     { level: "Classes 11–12", name: "IIT-JEE Integrated", highlight: "Rigorous, focused training for JEE Main & Advanced alongside CBSE board prep.", accent: "bg-secondary" },
     { level: "Classes 11–12", name: "NEET Integrated", highlight: "Comprehensive preparation for NEET (UG) with expert Biology, Chemistry & Physics faculty.", accent: "bg-secondary" },
-    { level: "Classes 6–12", name: "School + Coaching Integration", highlight: "One campus. One schedule. No separate coaching. The Infinity Advantage at its fullest.", accent: "bg-primary" },
+    { level: "Classes 6–12", name: "School + Coaching Integration", highlight: "One campus. One schedule. No separate coaching. The Infinity Advantage at its fullest.", accent: "bg-secondary" },
   ];
 
   const facilities = [
@@ -429,14 +428,12 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
             {[
               { name: "Ms. Afshan Parveen", role: "Teacher", img: staffAfshan },
               { name: "Ms. Nishi Parveen", role: "Teacher", img: staffNishi },
               { name: "Mrs. Anamika", role: "Teacher", img: staffAnamika },
               { name: "Ms. Baby Sana", role: "Teacher", img: null },
-              { name: "Ms. Arshiya Kamil", role: "Teacher", img: null },
-              { name: "Ms. Hira", role: "Teacher", img: staffHira },
             ].map((fac, i) => (
               <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group border border-border hover:border-primary/20">
                 <div className="aspect-[3/4] overflow-hidden bg-muted">

@@ -23,6 +23,7 @@ export function Navbar() {
     { name: "Faculty", path: "/faculty" },
     { name: "Hostel", path: "/hostel" },
     { name: "Admission", path: "/admission" },
+    { name: "Disclosure", path: "/disclosure" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -55,12 +56,8 @@ export function Navbar() {
       {/* Main Navbar */}
       <div className={`px-6 py-3 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-white"}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-3">
-            <img src={logoImg} alt="IPS Shield Logo" className="h-20 w-auto object-contain" />
-            <div className="flex flex-col leading-tight">
-              <span className="text-primary font-bold text-lg tracking-wide">INFINITY PUBLIC SCHOOL</span>
-              <span className="text-secondary text-xs font-semibold tracking-widest">KURSI, BARABANKI</span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <img src={logoImg} alt="Infinity Public School Logo" className="h-14 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
@@ -108,11 +105,7 @@ export function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-border flex flex-col p-4 animate-in slide-in-from-top-2">
           <div className="flex items-center gap-3 p-4 mb-2">
-            <img src={logoImg} alt="IPS Shield Logo" className="h-14 w-auto object-contain" />
-            <div className="flex flex-col leading-tight">
-              <span className="text-primary font-bold text-base tracking-wide">INFINITY PUBLIC SCHOOL</span>
-              <span className="text-secondary text-xs font-semibold tracking-widest">KURSI, BARABANKI</span>
-            </div>
+            <img src={logoImg} alt="Infinity Public School Logo" className="h-12 w-auto object-contain" />
           </div>
           {navLinks.map((link) => (
             <Link

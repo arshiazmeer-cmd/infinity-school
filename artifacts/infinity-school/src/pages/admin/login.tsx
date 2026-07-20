@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
-import { Shield, Eye, EyeOff, Loader2 } from "lucide-react";
+import { Eye, EyeOff, Loader2 } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 import { loginAdmin, isAdminLoggedIn } from "@/lib/adminApi";
 import { toast } from "sonner";
 
@@ -34,11 +35,11 @@ export default function AdminLogin() {
       <div className="w-full max-w-sm">
         {/* Card header */}
         <div className="bg-[#1a3a6b] rounded-t-2xl px-8 pt-8 pb-6 text-center border-b border-white/10">
-          <div className="inline-flex items-center justify-center bg-yellow-400 rounded-full w-16 h-16 mb-4 shadow-lg">
-            <Shield size={28} className="text-[#1a3a6b]" />
+          <div className="inline-block bg-white rounded-xl px-4 py-2 mb-4 shadow-lg">
+            <img src={logoImg} alt="Infinity Public School" className="h-10 w-auto object-contain" />
           </div>
           <h1 className="text-2xl font-bold text-white">Admin Login</h1>
-          <p className="text-white/60 text-sm mt-1">Infinity Public School</p>
+          <p className="text-white/60 text-sm mt-1">Infinity Public School, Kursi</p>
         </div>
 
         {/* Card body */}

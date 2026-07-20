@@ -6,9 +6,9 @@ import {
   LogOut,
   Menu,
   X,
-  Shield,
   LayoutDashboard,
 } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 const navItems = [
   { label: "Dashboard", icon: LayoutDashboard, path: "/admin/dashboard" },
@@ -41,12 +41,12 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static md:h-screen`}
       >
         {/* Brand */}
-        <div className="flex items-center gap-3 px-5 py-5 border-b border-white/10">
-          <div className="bg-yellow-400 text-[#1a3a6b] rounded-full p-2">
-            <Shield size={18} />
+        <div className="flex items-center gap-3 px-4 py-4 border-b border-white/10">
+          <div className="bg-white rounded-lg px-2 py-1.5">
+            <img src={logoImg} alt="IPS Logo" className="h-7 w-auto object-contain" />
           </div>
-          <div className="leading-tight">
-            <p className="font-bold text-sm tracking-wide">ADMIN PANEL</p>
+          <div className="leading-tight min-w-0">
+            <p className="font-bold text-xs tracking-wide truncate">ADMIN PANEL</p>
             <p className="text-[10px] text-white/60 uppercase tracking-widest">Infinity Public School</p>
           </div>
           <button

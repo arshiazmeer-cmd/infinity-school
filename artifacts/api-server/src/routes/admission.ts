@@ -256,7 +256,7 @@ async function sendParentConfirmationEmail(data: AdmissionEmailData): Promise<vo
         <p style="color:#555;font-size:14px;">
           For any queries, contact us at:<br/>
           📞 <strong>+91 9151115234</strong><br/>
-          🌐 <strong>www.ipskursi.com</strong>
+          🌐 <strong><a href="https://www.ipskursi.in" style="color:#1a3a6b;">www.ipskursi.in</a></strong>
         </p>
       </div>
       <div style="background:#f5f5f5;padding:12px;text-align:center;font-size:12px;color:#999;">

@@ -11,8 +11,8 @@ import {
   LogOut,
   Menu,
   X,
-  GraduationCap,
 } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 interface NavItem {
   href: string;
@@ -57,13 +57,13 @@ export function TeacherLayout({ children, title }: TeacherLayoutProps) {
         style={{ backgroundColor: "#1a3a6b" }}
       >
         {/* Logo */}
-        <div className="flex items-center gap-3 px-6 py-5 border-b border-white/10">
-          <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "#f0c050" }}>
-            <GraduationCap size={22} className="text-white" />
+        <div className="flex items-center gap-3 px-4 py-4 border-b border-white/10">
+          <div className="bg-white rounded-lg px-2 py-1.5">
+            <img src={logoImg} alt="IPS Logo" className="h-7 w-auto object-contain" />
           </div>
-          <div>
-            <p className="text-white font-bold text-sm leading-tight">Infinity Public</p>
-            <p className="text-blue-200 text-xs">Teacher Portal</p>
+          <div className="min-w-0">
+            <p className="text-white font-bold text-xs leading-tight truncate">TEACHER PORTAL</p>
+            <p className="text-blue-200 text-[10px]">Infinity Public School</p>
           </div>
           <button
             className="ml-auto lg:hidden text-white/70 hover:text-white"

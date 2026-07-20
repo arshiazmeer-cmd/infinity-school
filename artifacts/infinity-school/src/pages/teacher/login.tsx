@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
-import { GraduationCap, Eye, EyeOff, Lock, Mail } from "lucide-react";
+import { Eye, EyeOff, Lock, Mail } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 import { loginTeacher } from "@/lib/teacherApi";
 import { toast } from "sonner";
 
@@ -62,8 +63,8 @@ export default function TeacherLogin() {
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
           {/* Header */}
           <div className="px-8 py-8 text-center" style={{ backgroundColor: "#1a3a6b" }}>
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: "#f0c050" }}>
-              <GraduationCap size={32} className="text-white" />
+            <div className="inline-block bg-white rounded-xl px-4 py-2 mb-4 shadow-lg">
+              <img src={logoImg} alt="Infinity Public School" className="h-10 w-auto object-contain" />
             </div>
             <h1 className="text-2xl font-bold text-white">Teacher Login</h1>
             <p className="text-blue-200 text-sm mt-1">Infinity Public School, Kursi</p>

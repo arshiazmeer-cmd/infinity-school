@@ -23,3 +23,4 @@ export * from "./lessonPlans";
 export * from "./homework";
 export * from "./studyMaterials";
 export * from "./notices";
+export * from "./disclosures";

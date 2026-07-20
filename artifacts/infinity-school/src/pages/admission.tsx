@@ -241,7 +241,7 @@ export default function Admission() {
     <div className="flex flex-col min-h-screen">
       {/* Hero */}
       <section className="bg-primary pt-24 pb-16 text-center px-6">
-        <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Admission 2025–26</h1>
+        <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Admission 2026–27</h1>
         <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
           Join Infinity Public School and take the first step towards a brilliant future.
         </p>
@@ -332,7 +332,7 @@ export default function Admission() {
             <div className="bg-primary text-white rounded-2xl p-6 mb-8 text-center shadow-lg">
               <BookOpen className="mx-auto mb-3" size={32} />
               <h2 className="text-2xl font-heading font-bold">Online Admission Enquiry Form</h2>
-              <p className="text-primary-foreground/80 text-sm mt-1">Session 2025–26 · Infinity Public School, Kursi</p>
+              <p className="text-primary-foreground/80 text-sm mt-1">Session 2026–27 · Infinity Public School, Kursi</p>
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">

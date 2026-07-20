@@ -10,6 +10,7 @@ import Contact from "@/pages/contact";
 import FAQ from "@/pages/faq";
 import Admission from "@/pages/admission";
 import About from "@/pages/about";
+import Disclosure from "@/pages/disclosure";
 import Faculty from "@/pages/faculty";
 import Gallery from "@/pages/gallery";
 import Hostel from "@/pages/hostel";
@@ -63,6 +64,7 @@ function PublicRoutes() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/disclosure" component={Disclosure} />
         <Route path="/faculty" component={Faculty} />
         <Route path="/gallery" component={Gallery} />
         <Route path="/hostel" component={Hostel} />

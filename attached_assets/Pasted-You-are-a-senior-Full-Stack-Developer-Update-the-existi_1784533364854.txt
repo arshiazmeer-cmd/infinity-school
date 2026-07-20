@@ -1,0 +1,378 @@
+You are a senior Full-Stack Developer. Update the existing Infinity Public School website without changing the current design, responsiveness, SEO structure, or existing functionality unless mentioned below.
+
+General Instructions
+Keep the existing UI/UX intact.
+Maintain responsive design for mobile, tablet, and desktop.
+Do not break any existing features.
+Use clean, modular code.
+Update database schema wherever required.
+Update both frontend and backend if necessary.
+1. Update Admission Session
+
+Replace Admission Session 2025-26 (or any old session) with
+
+Admission Session 2026–27
+
+Update this text everywhere on the website including:
+
+Hero Section
+Admission Page
+Footer
+Admission Form
+Meta Description (if present)
+SEO Tags
+Banner
+Popups
+Email Templates
+Any hardcoded content
+2. Update Admission Email Notification
+
+Whenever a parent submits the Admission Form:
+
+Send Confirmation Email
+
+The email should contain:
+
+Student Name
+Parent Name
+Class Applied
+Phone Number
+Thank You Message
+Admission Team Contact
+
+Replace every website link inside the email with
+
+www.ipskursi.in
+
+Do not use the old website URL anywhere.
+
+3. Change School Logo
+
+Replace the existing logo in:
+
+Header
+Mobile Header
+Footer
+Login Screens (if available)
+Admin Panel
+Teacher Panel
+Browser Favicon (if provided)
+
+Use the new logo while keeping the same dimensions and responsiveness.
+
+4. Add "Mandatory Public Disclosure"
+
+Create a new menu item:
+
+Mandatory Public Disclosure
+
+It should appear in the main navigation.
+
+Inside this page create sections:
+
+CBSE Affiliation
+Society Registration
+Recognition Certificate
+NOC
+Building Safety
+Fire Safety
+Water & Sanitation
+Staff Details
+Infrastructure
+Academic Calendar
+Fee Structure
+
+Each section should allow PDF upload from Admin Panel.
+
+Display PDFs in a professional downloadable format.
+
+5. Update "Courses Designed for Success"
+
+Currently every class strip has different colors.
+
+Change all class strips/cards to
+
+Orange Theme
+
+Use the existing orange color palette of the website.
+
+Hover effect should remain.
+
+6. Improve About Page
+
+Replace the current About content with a detailed professional section.
+
+Length:
+
+600–800 words.
+
+Include:
+
+History
+Vision
+Mission
+Academic Excellence
+Digital Learning
+Experienced Faculty
+Character Building
+Sports
+Leadership
+Discipline
+Infrastructure
+Future Goals
+Competitive Exam Preparation
+Parent Partnership
+
+Write in premium school brochure style.
+
+7. Remove Staff Members
+
+Remove completely from website:
+
+Ms. Hira
+Ms. Arshiya Kamil
+
+Remove from:
+
+Staff Page
+Faculty Section
+Team Cards
+Database
+Search Results
+8. Upgrade Teacher Panel
+
+Add the following modules.
+
+Dashboard
+
+Show:
+
+Today's Classes
+Pending Tasks
+Announcements
+Timetable
+
+Teachers can view
+
+Daily Timetable
+Weekly Timetable
+Period Timing
+Assigned Classes
+Pending Tasks
+
+Teacher can see
+
+Homework Pending
+Lesson Plan Pending
+Attendance Pending
+Exam Duty
+Admin Assigned Tasks
+
+Status:
+
+Pending
+Completed
+Leave Application
+
+Teacher can
+
+Apply Leave
+Select Leave Type
+Start Date
+End Date
+Reason
+Upload Medical Certificate (optional)
+
+Admin can
+
+Approve
+
+Reject
+
+Keep Pending
+
+Teacher can view leave history.
+
+9. Upgrade Admin Panel
+
+Add the following sections.
+
+A. Notice Management
+
+Admin can
+
+Upload Notice
+Add Title
+Description
+PDF
+Image
+Publish Date
+Expiry Date
+
+Show notices automatically on website.
+
+B. Total Students Dashboard
+
+Display
+
+Total Students
+
+Boys
+
+Girls
+
+Class-wise Strength
+
+Section-wise Strength
+
+Active Students
+
+Alumni
+
+Recent Admissions
+
+Charts preferred.
+
+C. Admission Inquiry
+
+Whenever someone submits Admission Form:
+
+Automatically save inquiry.
+
+Show in Admin Panel.
+
+Fields:
+
+Student Name
+Parent Name
+Phone
+Email
+Class
+Date
+Status
+
+Admin can
+
+Mark:
+
+New
+Contacted
+Admission Confirmed
+Closed
+
+Search and Filter should be available.
+
+D. Student Management System
+
+Create complete Student Management Module.
+
+Features:
+
+Student List
+
+Search
+
+Filter
+
+Pagination
+
+Export
+
+Student Profile
+
+Photo
+
+Admission Number
+
+Roll Number
+
+Name
+
+Gender
+
+DOB
+
+Blood Group
+
+Address
+
+Aadhar (optional)
+
+Religion
+
+Category
+
+Previous School
+
+Parent Information
+
+Father Name
+
+Mother Name
+
+Guardian Name
+
+Occupation
+
+Phone
+
+Email
+
+Emergency Contact
+
+Academic Information
+
+Class
+
+Section
+
+Roll Number
+
+Admission Date
+
+House
+
+Transport
+
+Hostel
+
+Fee Status
+
+Student Status
+
+Active
+
+Inactive
+
+Transferred
+
+Alumni
+
+CRUD Operations
+
+Admin can
+
+Add Student
+
+Edit Student
+
+Delete Student
+
+View Student
+
+Search Student
+
+Print Student Profile
+
+Additional Requirements
+Maintain existing authentication.
+Ensure secure role-based access.
+Teacher should only access Teacher Panel.
+Admin should have full control.
+Follow clean coding practices.
+Update database migrations if needed.
+Ensure all newly added modules are responsive.
+Do not remove any existing working functionality unless requested.
+Test every feature before finalizing.
+
+Deliver a production-ready version of the website with all the above changes fully integrated.

@@ -33,6 +33,9 @@ export const admissionsTable = pgTable("admissions", {
   hostelRequired: boolean("hostel_required").notNull().default(false),
   medicalCondition: text("medical_condition"),
 
+  // Inquiry tracking
+  inquiryStatus: text("inquiry_status").notNull().default("new"), // new | contacted | confirmed | closed
+
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 

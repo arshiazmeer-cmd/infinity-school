@@ -7,12 +7,26 @@ import {
   Menu,
   X,
   LayoutDashboard,
+  GraduationCap,
+  Bell,
+  ClipboardList,
+  CalendarDays,
+  UserCheck,
+  FileText,
+  CheckSquare,
 } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 
 const navItems = [
   { label: "Dashboard", icon: LayoutDashboard, path: "/admin/dashboard" },
   { label: "Teachers", icon: Users, path: "/admin/teachers" },
+  { label: "Students", icon: GraduationCap, path: "/admin/students" },
+  { label: "Admission Inquiries", icon: ClipboardList, path: "/admin/admissions" },
+  { label: "Notice Board", icon: Bell, path: "/admin/notices" },
+  { label: "Leave Requests", icon: UserCheck, path: "/admin/leave" },
+  { label: "Timetable", icon: CalendarDays, path: "/admin/timetable" },
+  { label: "Teacher Tasks", icon: CheckSquare, path: "/admin/teacher-tasks" },
+  { label: "Public Disclosure", icon: FileText, path: "/admin/disclosures" },
 ];
 
 interface AdminLayoutProps {
@@ -108,7 +122,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
             <Menu size={22} />
           </button>
           <div className="flex items-center gap-2">
-            <Shield size={16} className="text-[#1a3a6b]" />
+            <LayoutDashboard size={16} className="text-[#1a3a6b]" />
             <span className="font-bold text-[#1a3a6b] text-sm">Admin Panel</span>
           </div>
         </header>

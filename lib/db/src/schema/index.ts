@@ -24,3 +24,7 @@ export * from "./homework";
 export * from "./studyMaterials";
 export * from "./notices";
 export * from "./disclosures";
+export * from "./timetables";
+export * from "./teacherTasks";
+export * from "./leaveApplications";
+export * from "./students";

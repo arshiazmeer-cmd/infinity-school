@@ -24,11 +24,21 @@ import Homework from "@/pages/teacher/homework";
 import StudyMaterial from "@/pages/teacher/study-material";
 import Notices from "@/pages/teacher/notices";
 import Profile from "@/pages/teacher/profile";
+import TeacherTimetable from "@/pages/teacher/timetable";
+import TeacherTasks from "@/pages/teacher/tasks";
+import TeacherLeave from "@/pages/teacher/leave";
 
 // Admin panel pages
 import AdminLogin from "@/pages/admin/login";
 import AdminDashboard from "@/pages/admin/dashboard";
 import AdminTeachers from "@/pages/admin/teachers";
+import AdminNotices from "@/pages/admin/notices";
+import AdminStudents from "@/pages/admin/students";
+import AdminAdmissions from "@/pages/admin/admissions";
+import AdminLeave from "@/pages/admin/leave";
+import AdminTimetable from "@/pages/admin/timetable";
+import AdminTeacherTasks from "@/pages/admin/teacher-tasks";
+import AdminDisclosures from "@/pages/admin/disclosures";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +52,9 @@ function TeacherRoutes() {
       <Route path="/teacher/study-material" component={StudyMaterial} />
       <Route path="/teacher/notices" component={Notices} />
       <Route path="/teacher/profile" component={Profile} />
+      <Route path="/teacher/timetable" component={TeacherTimetable} />
+      <Route path="/teacher/tasks" component={TeacherTasks} />
+      <Route path="/teacher/leave" component={TeacherLeave} />
       <Route path="/teacher" component={TeacherLogin} />
     </Switch>
   );
@@ -53,6 +66,13 @@ function AdminRoutes() {
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin/dashboard" component={AdminDashboard} />
       <Route path="/admin/teachers" component={AdminTeachers} />
+      <Route path="/admin/notices" component={AdminNotices} />
+      <Route path="/admin/students" component={AdminStudents} />
+      <Route path="/admin/admissions" component={AdminAdmissions} />
+      <Route path="/admin/leave" component={AdminLeave} />
+      <Route path="/admin/timetable" component={AdminTimetable} />
+      <Route path="/admin/teacher-tasks" component={AdminTeacherTasks} />
+      <Route path="/admin/disclosures" component={AdminDisclosures} />
       <Route path="/admin" component={AdminLogin} />
     </Switch>
   );

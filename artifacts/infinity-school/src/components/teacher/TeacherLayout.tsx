@@ -11,6 +11,9 @@ import {
   LogOut,
   Menu,
   X,
+  CalendarDays,
+  CheckSquare,
+  CalendarOff,
 } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 
@@ -22,10 +25,13 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { href: "/teacher/dashboard", icon: <LayoutDashboard size={20} />, label: "Dashboard" },
+  { href: "/teacher/timetable", icon: <CalendarDays size={20} />, label: "Timetable" },
+  { href: "/teacher/tasks", icon: <CheckSquare size={20} />, label: "Pending Tasks" },
   { href: "/teacher/lesson-plans", icon: <BookOpen size={20} />, label: "Lesson Plan" },
   { href: "/teacher/homework", icon: <ClipboardList size={20} />, label: "Homework" },
   { href: "/teacher/study-material", icon: <FolderOpen size={20} />, label: "Study Material" },
   { href: "/teacher/notices", icon: <Bell size={20} />, label: "Notices" },
+  { href: "/teacher/leave", icon: <CalendarOff size={20} />, label: "Leave" },
   { href: "/teacher/profile", icon: <UserCircle size={20} />, label: "My Profile" },
 ];
 

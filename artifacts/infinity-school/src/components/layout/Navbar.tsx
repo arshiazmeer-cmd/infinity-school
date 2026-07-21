@@ -2,7 +2,7 @@ import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail, Download, GraduationCap, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoImg from "@/assets/ips-logo.png";
+import logoImg from "@/assets/ips-logo-final.jpg";
 import { BROCHURE_URL, BROCHURE_FILENAME } from "@/lib/brochure";
 
 export function Navbar() {

@@ -112,7 +112,6 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-
       {/* Hero Section */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -189,7 +188,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* About Infinity Public School Section */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-y-[-30%] translate-x-[30%]"></div>
@@ -205,10 +203,10 @@ export default function HomePage() {
               <h3 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-6 leading-tight">
                 About Infinity Public School
               </h3>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              <p className="text-lg leading-relaxed mb-6 text-foreground">
                 Infinity Public School is a premier educational institution in Kursi, Barabanki, where academic schooling and competitive exam preparation are seamlessly integrated under one roof. Founded with the vision of eliminating the dual pressure students face from managing school and coaching separately, we have built a focused, disciplined, and aspirational learning ecosystem.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <p className="leading-relaxed mb-8 text-foreground">
                 Our curriculum is CBSE-aligned and simultaneously prepares students for IIT-JEE, NEET, and other national-level examinations — from Nursery foundations to Class 12 advanced programs.
               </p>
               <div className="grid grid-cols-2 gap-4">
@@ -241,14 +239,13 @@ export default function HomePage() {
               ].map((item, i) => (
                 <div key={i} className="p-5 rounded-2xl border border-border bg-muted/30 hover:border-primary/20 hover:bg-white transition-all">
                   <h4 className="font-bold text-primary mb-2">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.content}</p>
+                  <p className="text-sm leading-relaxed text-foreground">{item.content}</p>
                 </div>
               ))}
             </motion.div>
           </div>
         </div>
       </section>
-
       {/* Why Choose Infinity */}
       <section className="py-24 bg-muted relative overflow-hidden">
         <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2"></div>
@@ -280,13 +277,12 @@ export default function HomePage() {
                   {feature.icon}
                 </div>
                 <h4 className="text-xl font-bold text-primary mb-3">{feature.title}</h4>
-                <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
+                <p className="leading-relaxed text-foreground">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Courses Offered */}
       <section className="py-24 bg-primary text-white">
         <div className="container mx-auto px-6">
@@ -310,7 +306,7 @@ export default function HomePage() {
                   {course.level}
                 </span>
                 <h4 className="text-2xl font-bold mb-3">{course.name}</h4>
-                <p className="text-primary-foreground/70 mb-8 leading-relaxed flex-grow">{course.highlight}</p>
+                <p className="mb-8 leading-relaxed flex-grow text-background">{course.highlight}</p>
                 <Link href="/admission" className="mt-auto">
                   <Button className="w-full bg-white text-primary hover:bg-gray-100 group">
                     Enquire Now <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -321,7 +317,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Key Stats Banner */}
       <section className="py-16 bg-gradient-to-r from-primary to-[#095a96] border-y-4 border-secondary text-white">
         <div className="container mx-auto px-6 text-center">
@@ -346,7 +341,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Leadership Messages */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
@@ -413,7 +407,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Faculty Section Preview */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-6">
@@ -455,7 +448,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Top Class Facilities */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
@@ -496,7 +488,7 @@ export default function HomePage() {
                   {fac.icon}
                 </div>
                 <h4 className="font-bold text-primary text-sm mb-1">{fac.name}</h4>
-                <p className="text-xs text-muted-foreground leading-relaxed">{fac.desc}</p>
+                <p className="text-xs leading-relaxed text-foreground">{fac.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -510,7 +502,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Admission Process & Scholarship */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-6">
@@ -532,7 +523,7 @@ export default function HomePage() {
                     </div>
                     <div className="flex-1 p-5 bg-white rounded-2xl border border-border shadow-sm">
                       <h4 className="font-bold text-primary text-base mb-1">{s.title}</h4>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+                      <p className="text-sm leading-relaxed text-foreground">{s.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -571,14 +562,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Testimonials</h2>
             <h3 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-4">What Parents Say About Us</h3>
-            <p className="text-muted-foreground">Trusted by parents from Nursery to Class 12 across Barabanki and neighbouring districts.</p>
+            <p className="text-foreground">Trusted by parents from Nursery to Class 12 across Barabanki and neighbouring districts.</p>
           </div>
 
           <div className="max-w-5xl mx-auto">
@@ -612,7 +602,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-6 max-w-4xl">
@@ -644,7 +633,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">

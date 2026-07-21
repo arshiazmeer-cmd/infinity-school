@@ -406,7 +406,7 @@ export default function HomePage() {
                 </div>
                 <div className="p-8">
                   <div className="text-secondary text-4xl font-serif leading-none mb-2">"</div>
-                  <p className="text-muted-foreground text-sm leading-relaxed italic">{leader.message}</p>
+                  <p className="text-black font-bold text-sm leading-relaxed italic">{leader.message}</p>
                 </div>
               </motion.div>
             ))}
@@ -594,7 +594,7 @@ export default function HomePage() {
                           </div>
                           <span className="text-xs font-bold text-secondary bg-secondary/10 px-2 py-1 rounded-full">{t.tag}</span>
                         </div>
-                        <p className="text-muted-foreground italic mb-6 leading-relaxed text-sm">"{t.text}"</p>
+                        <p className="text-black font-bold italic mb-6 leading-relaxed text-sm">"{t.text}"</p>
                       </div>
                       <div>
                         <h4 className="font-bold text-primary">{t.name}</h4>

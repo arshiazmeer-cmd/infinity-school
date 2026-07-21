@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Download } from "lucide-react";
 import logoImg from "@/assets/logo.png";
+import { BROCHURE_URL, BROCHURE_FILENAME } from "@/lib/brochure";
 
 export function Footer() {
   return (
@@ -29,8 +30,10 @@ export function Footer() {
             </a>
           </div>
           <a
-            href="/brochure.pdf"
-            download="IPS-Brochure.pdf"
+            href={BROCHURE_URL}
+            download={BROCHURE_FILENAME}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-secondary text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-secondary/90 transition-colors"
           >
             <Download size={14} /> Download Brochure

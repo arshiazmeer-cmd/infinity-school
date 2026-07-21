@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail, Download, GraduationCap, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoImg from "@/assets/logo.png";
+import { BROCHURE_URL, BROCHURE_FILENAME } from "@/lib/brochure";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,8 +45,10 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <span className="font-semibold text-secondary">Admissions Open 2026–27</span>
           <a
-            href="/brochure.pdf"
-            download="IPS-Brochure.pdf"
+            href={BROCHURE_URL}
+            download={BROCHURE_FILENAME}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs bg-secondary text-white px-3 py-1 rounded-full hover:bg-secondary/90 transition-colors font-semibold"
           >
             <Download size={12} /> Download Brochure
@@ -133,8 +136,10 @@ export function Navbar() {
             </Button>
           </Link>
           <a
-            href="/brochure.pdf"
-            download="IPS-Brochure.pdf"
+            href={BROCHURE_URL}
+            download={BROCHURE_FILENAME}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 mt-2 w-full border border-primary text-primary rounded-md py-2 text-sm font-semibold hover:bg-primary/5 transition-colors"
           >
             <Download size={14} /> Download Brochure

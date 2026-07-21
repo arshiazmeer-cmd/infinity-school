@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { BROCHURE_URL, BROCHURE_FILENAME } from "@/lib/brochure";
 import { motion } from "framer-motion";
 import {
   BookOpen, Users, Building, ShieldCheck,
@@ -153,7 +154,7 @@ export default function HomePage() {
                     Book Free Counseling
                   </Button>
                 </Link>
-                <a href="/brochure.pdf" download="IPS-Brochure.pdf">
+                <a href={BROCHURE_URL} download={BROCHURE_FILENAME} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white rounded-full px-8 text-lg h-14 shadow-[0_0_24px_rgba(254,132,0,0.45)] flex items-center gap-2">
                     <Download size={18} /> Download Brochure
                   </Button>
@@ -663,7 +664,7 @@ export default function HomePage() {
                       <Phone className="mr-2 w-5 h-5" /> Call Us Now
                     </Button>
                   </a>
-                  <a href="/brochure.pdf" download>
+                  <a href={BROCHURE_URL} download={BROCHURE_FILENAME} target="_blank" rel="noopener noreferrer">
                     <Button size="lg" variant="ghost" className="text-white hover:bg-white/10 border border-white/20 rounded-full w-full sm:w-auto">
                       <Download className="mr-2 w-5 h-5" /> Brochure
                     </Button>

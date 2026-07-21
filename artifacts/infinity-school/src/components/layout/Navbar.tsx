@@ -2,7 +2,7 @@ import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail, Download, GraduationCap, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/ips-logo.png";
 import { BROCHURE_URL, BROCHURE_FILENAME } from "@/lib/brochure";
 
 export function Navbar() {
@@ -55,10 +55,9 @@ export function Navbar() {
           </a>
         </div>
       </div>
-
       {/* Main Navbar */}
       <div className={`px-6 py-2 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-white"}`}>
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="max-w-7xl mx-auto flex items-center justify-start text-center">
           <Link href="/" className="flex items-center">
             <img src={logoImg} alt="Infinity Public School Logo" className="h-24 w-auto object-contain" />
           </Link>
@@ -103,7 +102,6 @@ export function Navbar() {
           </button>
         </div>
       </div>
-
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-border flex flex-col p-4 animate-in slide-in-from-top-2">

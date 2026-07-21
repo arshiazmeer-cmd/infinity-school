@@ -28,3 +28,4 @@ export * from "./timetables";
 export * from "./teacherTasks";
 export * from "./leaveApplications";
 export * from "./students";
+export * from "./adminUsers";

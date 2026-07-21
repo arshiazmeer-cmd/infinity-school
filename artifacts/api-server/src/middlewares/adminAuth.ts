@@ -4,6 +4,8 @@ import jwt from "jsonwebtoken";
 export interface AdminPayload {
   role: "admin";
   email: string;
+  name?: string;
+  adminRole?: string;
 }
 
 declare global {

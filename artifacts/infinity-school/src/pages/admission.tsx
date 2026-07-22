@@ -242,11 +242,10 @@ export default function Admission() {
       {/* Hero */}
       <section className="bg-primary pt-24 pb-16 text-center px-6">
         <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Admission 2026–27</h1>
-        <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
+        <p className="max-w-2xl mx-auto text-lg text-background">
           Join Infinity Public School and take the first step towards a brilliant future.
         </p>
       </section>
-
       {step === "process" && (
         <>
           {/* Process Flow */}
@@ -266,7 +265,7 @@ export default function Admission() {
                       {s.step}
                     </div>
                     <h3 className="text-xl font-bold text-primary mb-2">{s.title}</h3>
-                    <p className="text-muted-foreground">{s.desc}</p>
+                    <p className="text-foreground">{s.desc}</p>
                   </div>
                 ))}
               </div>
@@ -288,7 +287,7 @@ export default function Admission() {
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <CheckCircle2 className="text-secondary mt-1 shrink-0" size={20} />
-                        <span className="text-muted-foreground">{item}</span>
+                        <span className="text-foreground">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -296,17 +295,17 @@ export default function Admission() {
                     <h3 className="font-bold text-primary mb-2 flex items-center gap-2">
                       <MapPin size={20} className="text-secondary" /> Entrance Test (AST)
                     </h3>
-                    <p className="text-sm text-muted-foreground">Strictly merit-based. Top scorers can avail up to 100% scholarship on tuition fees.</p>
+                    <p className="text-sm text-foreground">Strictly merit-based. Top scorers can avail up to 100% scholarship on tuition fees.</p>
                   </div>
                 </div>
                 <div className="bg-primary text-white p-8 rounded-2xl shadow-xl">
                   <h3 className="text-2xl font-bold mb-4">Ready to Apply?</h3>
-                  <p className="text-primary-foreground/80 mb-6 text-sm leading-relaxed">
+                  <p className="mb-6 text-sm leading-relaxed text-background">
                     Fill our quick online admission form. Our counselling team will reach out within 24 hours of submission.
                   </p>
                   <ul className="space-y-2 mb-8">
                     {["Takes less than 5 minutes", "No fees to apply", "Instant confirmation via email", "Direct WhatsApp support"].map((t, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-primary-foreground/80">
+                      <li key={i} className="flex items-center gap-2 text-sm text-background">
                         <CheckCircle size={16} className="text-secondary shrink-0" />
                         {t}
                       </li>
@@ -324,7 +323,6 @@ export default function Admission() {
           </section>
         </>
       )}
-
       {step === "form" && (
         <section className="py-16 bg-muted/50">
           <div className="container mx-auto px-4 max-w-3xl">

@@ -11,13 +11,12 @@ export default function Hostel() {
           A home away from home. Safe, disciplined, and nurturing environment for focused preparation.
         </p>
       </section>
-
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Premium Boarding Experience</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              <p className="text-lg leading-relaxed mb-6 text-foreground">
                 Our hostel facilities are designed specifically keeping in mind the rigorous routine of JEE and NEET aspirants. We eliminate all daily chores and distractions so students can focus entirely on their studies.
               </p>
               <ul className="space-y-4">
@@ -30,7 +29,7 @@ export default function Hostel() {
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="text-secondary shrink-0 mt-1" />
-                    <span className="text-primary font-medium">{item}</span>
+                    <span className="font-medium text-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -58,7 +57,7 @@ export default function Hostel() {
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm">{feature.desc}</p>
+                <p className="text-sm text-foreground">{feature.desc}</p>
               </div>
             ))}
           </div>

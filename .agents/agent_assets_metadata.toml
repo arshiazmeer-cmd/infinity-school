@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "SCy9BlM-eRZcqewzZmTLS"
@@ -60,3 +59,9 @@ id = "TcWcsY6Gx72gKDfTXwLa-"
 uri = "file://artifacts/infinity-school/src/assets/topper-2.png"
 type = "image"
 title = "Topper student 2"
+
+[[outputs]]
+id = "-m6JnzbOwUO3fPIN2M-e8"
+uri = "file://infinity-school-hostinger.zip"
+type = "unspecified"
+title = "infinity-school-hostinger.zip"

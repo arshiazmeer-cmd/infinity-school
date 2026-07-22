@@ -14,6 +14,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 import heroBg from "@/assets/hero.png";
 import imgPooja from "@/assets/staff-pooja-rani.jpeg";
+import imgNisar from "@/assets/dr-nisar-ahmad.png";
+import imgArshi from "@/assets/dr-arshi-ahmad.png";
 import staffAfshan from "@/assets/staff-afshan-parveen.jpeg";
 import staffNishi from "@/assets/staff-nishi-parveen.jpeg";
 import staffAnamika from "@/assets/staff-anamika.jpeg";
@@ -354,11 +356,13 @@ export default function HomePage() {
               {
                 name: "Dr. Nisar Ahmad Nadvi",
                 designation: "Director",
+                img: imgNisar,
                 message: "At Infinity Public School, we are building not just students but future leaders of the nation. Our vision is to make quality integrated education accessible to every family in Barabanki and beyond. We believe that when schooling and competitive preparation work hand-in-hand, students flourish without pressure.",
               },
               {
                 name: "Dr. Arshi Ahmad",
                 designation: "Managing Director",
+                img: imgArshi,
                 message: "When we founded Infinity, we set out to solve the most pressing challenge facing students today — the burden of attending school and coaching separately. Our integrated model is the answer. Every rupee invested here goes back into creating the finest learning environment for your child.",
               },
               {
@@ -376,10 +380,10 @@ export default function HomePage() {
                 className="bg-muted rounded-3xl overflow-hidden border border-border shadow-sm hover:shadow-lg transition-shadow"
               >
                 <div className="bg-primary relative flex flex-col items-center text-center overflow-hidden min-h-[220px]">
-                  {leader.designation === "Principal" ? (
+                  {leader.img ? (
                     <>
                       <img
-                        src={imgPooja}
+                        src={leader.img}
                         alt={leader.name}
                         className="absolute inset-0 w-full h-full object-cover object-center"
                       />

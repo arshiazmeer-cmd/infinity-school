@@ -13,6 +13,9 @@ import imgBabySana from "@/assets/staff-baby-sana.jpeg";
 import imgAisha from "@/assets/staff-aysha.jpeg";
 import imgVandana from "@/assets/staff-vandana.jpeg";
 import imgPooja from "@/assets/staff-pooja-rani.jpeg";
+import imgNisar from "@/assets/dr-nisar-ahmad.png";
+import imgArshi from "@/assets/dr-arshi-ahmad.png";
+import imgSharad from "@/assets/sharad-trivedi.png";
 
 type StaffMember = {
   name: string;
@@ -30,6 +33,7 @@ const administration: StaffMember[] = [
 ];
 
 const teachers: StaffMember[] = [
+  { name: "Mr. Sharad Trivedi", role: "Teacher", img: imgSharad },
   { name: "Ms. Afshan Parveen", role: "Teacher", img: imgAfshan },
   { name: "Ms. Nishi Parveen", role: "Teacher", img: imgNishi },
   { name: "Mrs. Anamika", role: "Teacher", img: imgAnamika },
@@ -106,8 +110,8 @@ export default function Faculty() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {[
-                { name: "Dr. Nisar Ahmad Nadvi", role: "Director", img: null },
-                { name: "Dr. Arshi Ahmad", role: "Managing Director", img: null },
+                { name: "Dr. Nisar Ahmad Nadvi", role: "Director", img: imgNisar },
+                { name: "Dr. Arshi Ahmad", role: "Managing Director", img: imgArshi },
                 { name: "Mrs. Pooja Rani", role: "Principal", img: imgPooja },
               ].map((leader, i) => (
                 <div key={i} className="bg-white/10 rounded-2xl border border-white/20 hover:bg-white/15 transition-colors overflow-hidden">

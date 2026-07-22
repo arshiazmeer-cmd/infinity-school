@@ -53,11 +53,10 @@ export default function Disclosure() {
           </p>
         </div>
       </section>
-
       {/* Documents Grid */}
       <section className="py-20 bg-muted flex-1">
         <div className="container mx-auto px-6 max-w-6xl">
-          <p className="text-sm text-muted-foreground mb-10 bg-white border border-border rounded-xl px-5 py-3 flex items-start gap-3">
+          <p className="text-sm mb-10 bg-white border border-border rounded-xl px-5 py-3 flex items-start gap-3 text-foreground">
             <AlertCircle size={16} className="text-secondary shrink-0 mt-0.5" />
             All documents below are official records of Infinity Public School, Kursi, Barabanki. For queries, contact us at{" "}
             <a href="mailto:ipskursi@gmail.com" className="text-primary font-semibold hover:underline">ipskursi@gmail.com</a>.
@@ -75,14 +74,14 @@ export default function Disclosure() {
                     </div>
                     <div>
                       <h3 className="font-bold text-primary text-sm">{label}</h3>
-                      <p className="text-xs text-muted-foreground mt-0.5">{desc}</p>
+                      <p className="text-xs mt-0.5 text-foreground">{desc}</p>
                     </div>
                   </div>
 
                   {/* Documents */}
                   <div className="px-6 py-4">
                     {docs.length === 0 ? (
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground py-2">
+                      <div className="flex items-center gap-2 text-sm py-2 text-foreground">
                         <Clock size={14} className="shrink-0" />
                         <span>Document will be uploaded shortly.</span>
                       </div>
@@ -122,13 +121,13 @@ export default function Disclosure() {
           {/* Note */}
           <div className="mt-12 bg-white border border-border rounded-2xl p-6 text-sm text-muted-foreground leading-relaxed">
             <p className="font-semibold text-primary mb-2">Important Note</p>
-            <p>
+            <p className="text-foreground">
               The above disclosures are in compliance with CBSE affiliation bye-laws. All documents are authentic and duly approved by the concerned authorities.
               Infinity Public School, Kursi, Barabanki is committed to full transparency and accountability in all its operations.
               For any queries or clarifications, please contact the school office at <a href="tel:+919118502112" className="text-primary font-semibold">+91 9118502112</a> or
               email us at <a href="mailto:ipskursi@gmail.com" className="text-primary font-semibold">ipskursi@gmail.com</a>.
             </p>
-            <p className="mt-2">Website: <a href="https://www.ipskursi.in" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">www.ipskursi.in</a></p>
+            <p className="mt-2 text-foreground">Website: <a href="https://www.ipskursi.in" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">www.ipskursi.in</a></p>
           </div>
         </div>
       </section>

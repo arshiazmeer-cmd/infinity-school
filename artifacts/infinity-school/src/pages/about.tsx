@@ -13,12 +13,11 @@ export default function About() {
             Our Story
           </span>
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">About Infinity Public School</h1>
-          <p className="text-primary-foreground/80 max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-background">
             A premier integrated school in Kursi, Barabanki — combining CBSE excellence with IIT-JEE and NEET preparation to shape India's next generation of leaders, doctors, and engineers.
           </p>
         </div>
       </section>
-
       {/* Our Story — History */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
@@ -26,11 +25,11 @@ export default function About() {
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <span className="text-xs font-bold text-secondary tracking-widest uppercase">Our History</span>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mt-2 mb-6">Born from a Vision, Built on Trust</h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
+              <div className="space-y-4 leading-relaxed">
+                <p className="text-foreground">
                   Infinity Public School was founded in 2023 in the heart of Kursi, Barabanki, with a singular purpose — to make quality integrated education accessible to every family in the region. Our founders, Dr. Nisar Ahmad Nadvi and Dr. Arshi Ahmad, observed a troubling pattern: talented students from Barabanki were forced to travel to distant cities or manage gruelling dual schedules of school plus coaching, often at great expense and personal cost.
                 </p>
-                <p>
+                <p className="text-foreground">
                   The answer was Infinity Public School — an institution that brings the best of CBSE schooling and competitive exam preparation under a single roof, in one timetable, on one campus. Within just three years, the school has grown to serve over 450 students from Nursery to Class 12, earning the trust of families across Barabanki and neighbouring districts.
                 </p>
               </div>
@@ -45,14 +44,13 @@ export default function About() {
               ].map(({ value, label }) => (
                 <div key={label} className="bg-primary/5 border border-primary/10 rounded-2xl p-6 text-center">
                   <p className="text-3xl font-bold text-secondary">{value}</p>
-                  <p className="text-sm text-muted-foreground mt-1 font-medium">{label}</p>
+                  <p className="text-sm mt-1 font-medium text-foreground">{label}</p>
                 </div>
               ))}
             </motion.div>
           </div>
         </div>
       </section>
-
       {/* Vision & Mission */}
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-6 max-w-6xl">
@@ -63,7 +61,7 @@ export default function About() {
                 <Target size={28} />
               </div>
               <h2 className="text-2xl font-bold font-heading text-primary mb-4">Our Vision</h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="leading-relaxed text-foreground">
                 To be the premier educational institution in Uttar Pradesh — one that seamlessly integrates holistic academic growth with world-class competitive examination preparation, empowering every student to achieve their highest potential without the burden of managing parallel schooling and coaching.
               </p>
             </motion.div>
@@ -73,7 +71,7 @@ export default function About() {
                 <Award size={28} />
               </div>
               <h2 className="text-2xl font-bold font-heading mb-4">Our Mission</h2>
-              <ul className="space-y-3 text-primary-foreground/90">
+              <ul className="space-y-3 text-background">
                 {[
                   "Deliver CBSE academics and JEE/NEET preparation in a single, stress-free schedule.",
                   "Bring the best educators and modern pedagogy to Barabanki.",
@@ -91,7 +89,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Core Pillars */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
@@ -154,13 +151,12 @@ export default function About() {
                   {pillar.icon}
                 </div>
                 <h4 className="font-bold text-primary text-base mb-2">{pillar.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{pillar.desc}</p>
+                <p className="text-sm leading-relaxed text-foreground">{pillar.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Principal's Message */}
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-6 max-w-5xl">
@@ -177,17 +173,16 @@ export default function About() {
               <div className="p-10 md:p-12">
                 <span className="text-xs font-bold text-secondary tracking-widest uppercase">A Message From</span>
                 <h2 className="text-3xl font-heading font-bold text-primary mt-1 mb-6">Our Principal</h2>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>"At Infinity Public School, we do not simply teach — we mentor, guide, and invest in the full potential of every child. The challenge we set out to solve was real: students in Barabanki were spending their best years commuting between school and coaching, arriving home exhausted and overwhelmed. That is not how great futures are built."</p>
-                  <p>"Our integrated model brings CBSE academics and competitive preparation into one seamless daily schedule. Students attend school, study for JEE and NEET within school hours, and return home with time for self-study, rest, and family. The result is a calmer, more focused, and consistently high-performing student body."</p>
-                  <p>"We are deeply committed to future goals — expanding our programs, strengthening our infrastructure, and extending our reach to more families across the region. Every child who walks through our gates deserves a personalised roadmap to success, and that is exactly what we deliver — every single day."</p>
+                <div className="space-y-4 leading-relaxed">
+                  <p className="text-foreground">"At Infinity Public School, we do not simply teach — we mentor, guide, and invest in the full potential of every child. The challenge we set out to solve was real: students in Barabanki were spending their best years commuting between school and coaching, arriving home exhausted and overwhelmed. That is not how great futures are built."</p>
+                  <p className="text-foreground">"Our integrated model brings CBSE academics and competitive preparation into one seamless daily schedule. Students attend school, study for JEE and NEET within school hours, and return home with time for self-study, rest, and family. The result is a calmer, more focused, and consistently high-performing student body."</p>
+                  <p className="text-foreground">"We are deeply committed to future goals — expanding our programs, strengthening our infrastructure, and extending our reach to more families across the region. Every child who walks through our gates deserves a personalised roadmap to success, and that is exactly what we deliver — every single day."</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Milestones */}
       <section className="py-24 bg-primary text-white">
         <div className="container mx-auto px-6 max-w-4xl text-center">
@@ -210,7 +205,7 @@ export default function About() {
                 </div>
                 <div className="md:w-1/2 text-left bg-white/5 p-6 rounded-2xl border border-white/10">
                   <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                  <p className="text-primary-foreground/70 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-sm leading-relaxed text-background">{item.desc}</p>
                 </div>
               </div>
             ))}

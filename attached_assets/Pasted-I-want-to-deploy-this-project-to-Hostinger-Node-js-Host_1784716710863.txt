@@ -1,0 +1,66 @@
+I want to deploy this project to Hostinger Node.js Hosting.
+
+Please prepare this project for production deployment and fix all deployment issues.
+
+Requirements:
+
+1. Audit the entire project and update all dependencies to stable, secure versions. Remove all npm vulnerabilities, including high and critical severity issues.
+
+2. Generate a complete package.json with ALL required dependencies and scripts.
+   It must include proper "start" and "dev" scripts.
+
+3. Generate an up-to-date package-lock.json.
+
+4. Ensure the project works with Node.js 20+.
+
+5. Make sure index.mjs is the startup file and that the application listens on:
+   process.env.PORT || 3000
+
+6. Use dotenv correctly and make sure every required environment variable is documented.
+
+7. Generate a complete .env.example file containing every environment variable used by the project.
+
+8. Verify that PostgreSQL connects using DATABASE_URL.
+
+9. Remove unused packages and install only required dependencies.
+
+10. Run npm audit fix and update any vulnerable packages until there are no high or critical vulnerabilities.
+
+11. Verify that npm install completes without errors.
+
+12. Verify that npm start runs successfully.
+
+13. Create a DEPLOYMENT_GUIDE.md specifically for Hostinger explaining:
+    - How to create the PostgreSQL database
+    - How to import database-setup.sql
+    - How to configure Environment Variables
+    - How to deploy the Node.js application
+    - How to restart the application
+    - How to troubleshoot deployment errors
+
+14. Create a production-ready ZIP file containing everything required for Hostinger except node_modules.
+
+15. Before creating the ZIP, verify that all required files exist:
+
+- package.json
+- package-lock.json
+- index.mjs
+- .env.example
+- database-setup.sql
+- DEPLOYMENT_GUIDE.md
+- public/
+- views/
+- routes/
+- controllers/
+- middleware/
+- models/
+- utils/
+- package-lock.json
+
+16. Validate the ZIP by checking that a fresh server can run:
+npm install
+npm start
+
+without errors.
+
+Do not finish until the project is fully ready for deployment on Hostinger.

@@ -2,54 +2,50 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
-import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
-const rawPort = process.env.PORT;
+// PORT is only used by the dev server (vite serve / vite preview).
+// It is NOT required during production builds (vite build).
+const port = Number(process.env.PORT ?? "3000");
 
-if (!rawPort) {
-  throw new Error(
-    "PORT environment variable is required but was not provided.",
-  );
-}
-
-const port = Number(rawPort);
-
-if (Number.isNaN(port) || port <= 0) {
-  throw new Error(`Invalid PORT value: "${rawPort}"`);
-}
-
-const basePath = process.env.BASE_PATH;
-
-if (!basePath) {
-  throw new Error(
-    "BASE_PATH environment variable is required but was not provided.",
-  );
-}
+// BASE_PATH controls the Vite `base` option.
+// Defaults to "/" which is correct for a root-domain deployment on Hostinger.
+// Override with BASE_PATH env var if deploying to a sub-path.
+const basePath = process.env.BASE_PATH ?? "/";
 
 export default defineConfig({
   base: basePath,
   plugins: [
     react(),
     tailwindcss(),
-    runtimeErrorOverlay(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
+    // Replit-specific developer tooling — only loaded when running inside Replit.
+    // On Hostinger and any other host, REPL_ID is undefined so these are skipped entirely.
+    ...(process.env.REPL_ID !== undefined
       ? [
-          await import("@replit/vite-plugin-cartographer").then((m) =>
-            m.cartographer({
-              root: path.resolve(import.meta.dirname, ".."),
-            }),
-          ),
-          await import("@replit/vite-plugin-dev-banner").then((m) =>
-            m.devBanner(),
-          ),
+          (await import("@replit/vite-plugin-runtime-error-modal")).default(),
+          ...(process.env.NODE_ENV !== "production"
+            ? [
+                await import("@replit/vite-plugin-cartographer").then((m) =>
+                  m.cartographer({
+                    root: path.resolve(import.meta.dirname, ".."),
+                  }),
+                ),
+                await import("@replit/vite-plugin-dev-banner").then((m) =>
+                  m.devBanner(),
+                ),
+              ]
+            : []),
         ]
       : []),
   ],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "src"),
-      "@assets": path.resolve(import.meta.dirname, "..", "..", "attached_assets"),
+      "@assets": path.resolve(
+        import.meta.dirname,
+        "..",
+        "..",
+        "attached_assets",
+      ),
     },
     dedupe: ["react", "react-dom"],
   },

@@ -1,0 +1,84 @@
+I want you to prepare my entire project as a production-ready deployment package for Hostinger.
+
+Do NOT simply compress the current project.
+
+First perform a complete production audit and fix every deployment issue.
+
+Your objectives are:
+
+1. Scan the entire repository and identify every deployment issue.
+2. Fix all build issues.
+3. Fix all pnpm workspace issues.
+4. Resolve ERR_PNPM_IGNORED_BUILDS and configure .npmrc correctly.
+5. Verify every package.json.
+6. Ensure production start scripts exist.
+7. Ensure the application builds successfully.
+8. Ensure the application starts successfully.
+9. Ensure the server listens on process.env.PORT.
+10. Remove all Replit-specific configuration that is not needed in production.
+11. Verify Express routing.
+12. Verify API routes.
+13. Verify static file serving.
+14. Verify uploads.
+15. Verify authentication.
+16. Verify sessions.
+17. Verify JWT.
+18. Verify CORS.
+19. Verify database connection.
+20. Verify all environment variables.
+21. Verify TypeScript compilation.
+22. Verify production build output.
+23. Verify dependencies.
+24. Remove unused dependencies.
+25. Ensure compatibility with Hostinger Node.js hosting.
+
+After everything is fixed:
+
+• Build the project successfully.
+• Test the production build.
+• Test the production server.
+
+Then create ONE production ZIP file.
+
+The ZIP must contain EVERYTHING required to deploy the website on Hostinger.
+
+Include:
+
+✔ All source code
+✔ package.json
+✔ package-lock.json or pnpm-lock.yaml
+✔ .npmrc
+✔ tsconfig files
+✔ build configuration
+✔ production build
+✔ public folder
+✔ uploads folder (if required)
+✔ assets
+✔ database migration files
+✔ environment variable example (.env.example)
+✔ README with deployment instructions
+✔ Any required configuration files
+
+Do NOT include:
+- node_modules
+- .git
+- .cache
+- temporary files
+- logs
+
+The ZIP should be directly deployable on Hostinger without requiring any additional fixes.
+
+Finally provide:
+
+1. ZIP file
+2. Required Environment Variables
+3. Node Version
+4. Root Directory
+5. Install Command
+6. Build Command
+7. Start Command
+8. Output Directory
+9. Entry File
+10. Deployment instructions for Hostinger
+
+The final ZIP should work on Hostinger immediately after extracting or deploying, without additional code modifications.
